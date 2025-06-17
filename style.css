@@ -113,6 +113,43 @@ h3 {
   background-color: transparent;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(0);
+  }
+
+  .main {
+    margin-left: 0 !important;
+  }
+
+   .carousel {
+    width: 95%;
+  }
+
+   .logo {
+    height: 50px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  .hamburger {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+}
+
+
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -259,6 +296,23 @@ h3 {
   position: absolute;
   right: 1.5rem;
   top: 1rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.step-box {
+  background-color: var(--color-teal-blue);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
 .logo {
