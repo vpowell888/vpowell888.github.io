@@ -104,7 +104,6 @@ h3 {
 .hamburger {
   display: block;
   position: fixed;
-  top: 1rem;
   left: 1rem;
   font-size: 2rem;
   cursor: pointer;
@@ -112,50 +111,6 @@ h3 {
   color: var(--color-deep-navy);
   background-color: transparent;
 }
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: 3000;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-  }
-
-  .sidebar.collapsed {
-    transform: translateX(0);
-  }
-
-  .main {
-    margin-left: 0 !important;
-  }
-
-   .carousel {
-    width: 50%;
-  }
-
-   .logo {
-    height: 50px;
-    margin-top: 1rem;
-    margin-left: 2rem;
-  }
-.sidebar-logo {
-    width: 100px;     /* Adjust size as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;   /* Center the logo */
-    float: none;      /* Prevent floating */
-  }
-
-  .hamburger {
-    padding: 10px;     /* Optional: adjust padding for smaller screens */
-    text-align: center;
-  }
-}
-
-
 
 .dropdown {
   position: relative;
@@ -326,7 +281,6 @@ h3 {
   height: 70px;
   margin-right: 1rem;
   z-index: 5000;
-  margin-top: 2rem;
 }
 
 .main {
@@ -410,3 +364,49 @@ button:focus {
 .carousel-btn.next {
   right: 10px;
 }
+
+@media (max-width: 768px) {
+  .logo,
+  .sidebar-logo {
+    height: 50px;
+    width: auto;        /* Maintains aspect ratio */
+    margin: 1rem auto;  /* Center horizontally */
+    display: block;
+    float: none;
+  }
+
+  .hamburger {
+    padding: 10px;
+    text-align: center;
+  }
+
+   .sidebar {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%); /* Sidebar is hidden by default */
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%); /* Still hidden when collapsed */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Only show when explicitly opened */
+  }
+
+  .main {
+    margin-left: 0 !important;
+  }
+
+
+  .carousel {
+    width: 90%; /* Increased from 25% to better fit mobile layout */
+  }
+}
+
+

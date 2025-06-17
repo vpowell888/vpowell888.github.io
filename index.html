@@ -90,7 +90,7 @@
           <img src="homepage.png" alt="homepage" class="carousel-img" />
           <img src="solutions.png" alt="All solutions" class="carousel-img" />
           <img src="tools.png" alt="External tools and interfaces" class="carousel-img" />
-          <img src="data.png" alt="AI classified data" class="carousel-img" />
+          <img src="Data.png" alt="AI processed data" class="carousel-img" />
           <img src="Engagements.png" alt="Current Engagements" class="carousel-img" />
           <img src="Engagement detail.png" alt="AI driven detail of engagements" class="carousel-img" />
           <img src="Delivery.png" alt="Project in process of delivery" class="carousel-img" />
@@ -182,17 +182,16 @@
 
   // Sidebar toggle
   function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const main = document.querySelector('.main');
+  const sidebar = document.getElementById('sidebar');
+  const main = document.querySelector('.main');
 
-    sidebar.classList.toggle('collapsed');
-
-    if (sidebar.classList.contains('collapsed')) {
-      main.style.marginLeft = '0px';
-    } else {
-      main.style.marginLeft = '180px';
-    }
+  if (sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  } else {
+    sidebar.classList.add('open');
   }
+}
+
 
   function learnMore() {
     alert('Learn more functionality would go here!');
