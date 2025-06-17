@@ -141,10 +141,17 @@ h3 {
     margin-top: 1rem;
     margin-left: 2rem;
   }
+.sidebar-logo {
+    width: 100px;     /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;   /* Center the logo */
+    float: none;      /* Prevent floating */
+  }
 
   .hamburger {
-    top: 0.5rem;
-    left: 0.5rem;
+    padding: 10px;     /* Optional: adjust padding for smaller screens */
+    text-align: center;
   }
 }
 
