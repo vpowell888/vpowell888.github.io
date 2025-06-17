@@ -291,11 +291,15 @@ button:focus {
     margin-left: 0 !important;
   }
 
+  .carousel-section {
+  align-items: left;
+}
+
   .carousel {
-    width: 40%; /* Increased from 25% to better fit mobile layout */
-    display:block;
-    float: none;
-  }
+  width: 100%;
+  justify-content: flex-start;
+  margin: 0;
+}
 }
 
 
