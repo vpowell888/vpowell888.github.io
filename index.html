@@ -1,11 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My Static Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oblongix | Business Consulting Redefined by AI</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Welcome to My Site</h1>
-  <a href="contact.html">Contact Us</a>
+
+  <div class="hamburger" id="hamburger">
+    <img src="Oblongix Logo.png" alt="Oblongix Logo" class="logo sidebar-logo" />
+  </div>
+  <div class="sidebar collapsed" id="sidebar">
+
+    <div>
+      <ul class="nav-links-vertical" id="navLinks">
+        <div style="margin-top: 3rem;">
+          <li><a onclick="openContactModal()">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+    <div class="sidebar-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Oblongix. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="oblongix-hero">
+      <h2>AI delivered Business Consulting</h2>
+      <p>Next-gen business consulting using leading-edge AI technology combined with human expertise to achieve rapid business value.</p>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px;">
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Develop AI enabled Business Solutions">Develop</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Use AI to understand your challenges, objectives, and business context.">Discovery</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Match your needs to our AI-driven or hybrid business solutions.">Solution</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Align with stakeholders, scope the engagement, and confirm value targets.">Alignment</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Deploy the agreed solution using AI-driven agile delivery and real-time feedback loops.">Delivery</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Transfer knowledge from engagement, train users, and embed capabilities.">Handover</div>
+          <span style="color: var(--color-teal-blue);">→</span>
+          <div style="background-color: var(--color-teal-blue); color: var(--color-white); padding: 10px; border-radius: 5px;" title="Support ongoing impact tracking, updates, and value realization.">Sustain</div>
+        </div>
+      </div>
+      <br>
+      <p>An end-to-end AI-powered platform that automates consulting engagements — from problem discovery, solution selection to delivery — with marketplace and composable architecture features.</p>
+    </div>
+
+    <div class="oblongix-tiles grid-3" style="text-align: center;">
+      <a class="tile" aria-label="Explore AI Solutions">
+        <h3>AI Solutions</h3>
+        <p>Apply advanced AI business solutions immediately.</p>
+      </a>
+      <a class="tile" aria-label="Explore AI with Human Support">
+        <h3>AI with Human Support</h3>
+        <p>Leverage the power of AI to accelerate human performance, or provide expertise and oversight where AI cannot.</p>
+      </a>
+      <a class="tile" aria-label="Explore Human-led with AI Tools">
+        <h3>Human with AI Tools</h3>
+        <p>Sometimes, human leadership is essential—but amplified with AI, it's far more effective.</p>
+      </a>
+    </div>
+
+    <section class="carousel-section">
+      <h2 style="text-align: center; padding-top:0;">Pre-Release Platform Previews</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+        <div class="carousel-track">
+          <img src="homepage.png" alt="homepage" class="carousel-img" />
+          <img src="solutions.png" alt="All solutions" class="carousel-img" />
+          <img src="tools.png" alt="External tools and interfaces" class="carousel-img" />
+          <img src="data.png" alt="AI classified data" class="carousel-img" />
+          <img src="Engagements.png" alt="Current Engagements" class="carousel-img" />
+          <img src="Engagement detail.png" alt="AI driven detail of engagements" class="carousel-img" />
+          <img src="Delivery.png" alt="Project in process of delivery" class="carousel-img" />
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+      </div>
+    </section>
+    <div class="oblongix-hero">
+      <div class="discover-container">
+        <p>Early Stage Adopter or Interested Investor ? </p>
+        <p>Contact us to learn more!</p>
+        <a class="contact-button" onclick="openContactModal()">Get in Touch</a>
+      </div>
+    </div>
+
+  </main>
 </body>
+<script>
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const totalSlides = document.querySelectorAll('.carousel-img').length;
+    if (!track) return;
+
+    // Wrap around logic
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+
+    const offset = -currentIndex * 100;
+    track.style.transform = `translateX(${offset}%)`;
+  }
+
+  function prevSlide() {
+    currentIndex--;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    updateCarousel();
+  }
+
+  document.addEventListener('DOMContentLoaded', updateCarousel);
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+      name: this.elements["name"].value.trim(),
+      email: this.elements["email"].value.trim(),
+      message: this.elements["message"].value.trim()
+    };
+
+    if (!data.name || !data.email || !data.message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    fetch("/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    }).then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        closeContactModal();
+        this.reset();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    }).catch(err => {
+      console.error("Contact form error:", err);
+      alert("Error sending message. Please try again.");
+    });
+  });
+
+  function openContactModal() {
+    const modal = document.getElementById("contactModal");
+    if (modal) modal.style.display = "block";
+  }
+
+  function closeContactModal() {
+    const modal = document.getElementById("contactModal");
+    if (modal) modal.style.display = "none";
+  }
+
+  // Sidebar toggle
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+
+    sidebar.classList.toggle('collapsed');
+
+    if (sidebar.classList.contains('collapsed')) {
+      main.style.marginLeft = '0px';
+    } else {
+      main.style.marginLeft = '180px';
+    }
+  }
+
+  function learnMore() {
+    alert('Learn more functionality would go here!');
+  }
+
+  function selectSolution(id) {
+    if (!isLoggedIn()) {
+      alert('Please login to select solutions.');
+      showLoginModal();
+      return;
+    }
+    alert(`Selected solution ${id}`);
+  }
+
+  function toggleMobileMenu() {
+    const nav = document.getElementById("navLinks");
+    if (nav) {
+      nav.classList.toggle("active");
+    }
+  }
+
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('hamburger').addEventListener('click', toggleSidebar);
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeContactModal();
+    }
+  });
+
+  // Close modals when clicking outside
+  window.onclick = function(event) {
+    const contactModal = document.getElementById('contactModal');
+    if (event.target === contactModal) {
+      closeContactModal();
+    }
+  };
+</script>
+
 </html>

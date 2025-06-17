@@ -13,7 +13,7 @@ app.post('/contact', async (req, res) => {
 
   // Configure your SMTP transporter
   const transporter = nodemailer.createTransport({
-    service: 'Gmail', // Or another service like 'SendGrid', 'Outlook', etc.
+    service: 'Outlook', // Or another service like 'SendGrid', 'Outlook', etc.
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
@@ -23,8 +23,8 @@ app.post('/contact', async (req, res) => {
   // Email content
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_RECEIVER, // your receiving email
-    subject: `New Contact Form Submission from ${name}`,
+    to: process.env.EMAIL_RECEIVER, 
+    subject: `Contact Form from ${name}`,
     text: `You received a message:\n\nFrom: ${name} <${email}>\n\nMessage:\n${message}`
   };
 
