@@ -281,8 +281,7 @@ button:focus {
 @media (max-width: 768px) {
 
   .oblongix-hero {
-    padding-left: 1 rem;
-    margin-left:1 rem;
+    margin-right:0.5;
   }
 
   .logo {
@@ -303,7 +302,7 @@ button:focus {
 }
 
   .carousel {
-  width: 80%;
+  width: 60%;
   justify-content: flex-start;
   margin: 0;
 }
