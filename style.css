@@ -279,6 +279,12 @@ button:focus {
 }
 
 @media (max-width: 768px) {
+
+  .oblongix-hero {
+    padding-left: 1 rem;
+    margin-left:1 rem;
+  }
+
   .logo {
     height: 50px;
     width: auto;        /* Maintains aspect ratio */
@@ -288,7 +294,8 @@ button:focus {
   }
 
   .main {
-    margin-left: 0 !important;
+    margin-left: 1 rem;
+
   }
 
   .carousel-section {
@@ -296,7 +303,7 @@ button:focus {
 }
 
   .carousel {
-  width: 100%;
+  width: 80%;
   justify-content: flex-start;
   margin: 0;
 }
