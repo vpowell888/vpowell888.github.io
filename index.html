@@ -13,7 +13,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeContactModal()">&times;</span>
       <h2>Contact Us</h2>
-      <form id="contactForm">
+      <form id="contactForm" class="contactform">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -22,14 +22,21 @@
     </div>
   </div>
 
-  <main class="main">
-    <div>
-    <img src="Oblongix Logo.png" alt="Oblongix Logo" class="logo sidebar-logo" />
-  </div>
+  <main class="main" style="padding:1 rem;">
+    <div style="text-align: center;">
+      <img src="Oblongix Logo.png" alt="Oblongix Logo" />
+    </div>
+
+    <div style="position: relative; width: 100%;">
+      <img src="rocket_launch.png" alt="The rocket for Consulting" style="width: 100%; display: block;" />
+      <div style="position: absolute; bottom: 20%; left:10%; color: white; font-size: 2.5em;
+                  font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">The Rocket for Consulting</div>
+    </div>
+
     <div class="oblongix-hero">
       <h2>AI delivered Business Consulting</h2>
       <p>Next-gen business consulting using leading-edge AI technology combined with human expertise to achieve rapid business value.</p>
-      <div class="steps-wrapper" style="display: flex; justify-content: center;">
+      <div class="steps-wrapper" style="display: flex; justify-content: center; gap: 1 rem;">
         <div class="steps-container">
           <div class="step-box" title="Develop AI enabled Business Solutions">Develop</div>
           <span style="color: var(--color-teal-blue);">→</span>
@@ -129,6 +136,8 @@
       message: this.elements["message"].value.trim()
     };
 
+    console.log(data)
+
     if (!data.name || !data.email || !data.message) {
       alert('Please fill in all fields.');
       return;
@@ -165,20 +174,20 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-  
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeContactModal();
-    }
-  });
 
-  window.onclick = function(event) {
-    const contactModal = document.getElementById('contactModal');
-    if (event.target === contactModal) {
-      closeContactModal();
-    }
-  };
-});
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeContactModal();
+      }
+    });
+
+    window.onclick = function(event) {
+      const contactModal = document.getElementById('contactModal');
+      if (event.target === contactModal) {
+        closeContactModal();
+      }
+    };
+  });
 </script>
 
 </html>

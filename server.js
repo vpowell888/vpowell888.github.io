@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -5,25 +6,32 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(express.static(__dirname));
-app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.json()); 
+app.use(bodyParser.urlencoded({ extended: false }));
 // Email route
 app.post('/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Configure your SMTP transporter
   const transporter = nodemailer.createTransport({
-    service: 'Outlook', // Or another service like 'SendGrid', 'Outlook', etc.
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
-    }
+    },
+    tls: {
+      ciphers: 'SSLv3'
+    }, logger: true,
+  debug: true
   });
 
   // Email content
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_RECEIVER, 
+    to: process.env.EMAIL_RECEIVER,
     subject: `Contact Form from ${name}`,
     text: `You received a message:\n\nFrom: ${name} <${email}>\n\nMessage:\n${message}`
   };
