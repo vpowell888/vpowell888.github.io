@@ -9,6 +9,56 @@
   --color-white: #FFFFFF;
 }
 
+
+ .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .step-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+
+  .step-icon-box i {
+    font-size: 64px;
+    margin-bottom: 16px;
+  }
+
+  .step-icon-box:hover {
+    transform: scale(1.05);
+  }
+
+  .arrow {
+    font-size: 48px;
+    color: var(--color-teal-blue, #00bcd4);
+  }
+
+  /* Individual Colors */
+  .develop { background-color: #6a1b9a; }     /* Purple */
+  .discovery { background-color: #0277bd; }   /* Blue */
+  .solution { background-color: #00897b; }    /* Teal */
+  .alignment { background-color: #f9a825; }   /* Amber */
+  .delivery { background-color: #d84315; }    /* Deep Orange */
+  .handover { background-color: #2e7d32; }    /* Green */
+  .sustain { background-color: #455a64; }     /* Blue Grey */
+
+  
 html, body {
   background-color: var(--color-cream);
   color: var(--color-charcoal);
@@ -261,3 +311,46 @@ button:focus {
     margin: 1rem auto;
   }
 }
+
+ @media (max-width: 1200px) {
+    .step-icon-box {
+      width: 140px;
+      height: 140px;
+      font-size: 18px;
+    }
+
+    .step-icon-box i {
+      font-size: 54px;
+    }
+
+    .arrow {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .step-icon-box {
+      width: 120px;
+      height: 120px;
+      font-size: 16px;
+    }
+
+    .step-icon-box i {
+      font-size: 44px;
+    }
+
+    .arrow {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .steps-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .arrow {
+      transform: rotate(90deg);
+    }
+  }

@@ -5,10 +5,422 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oblongix | Business Consulting Redefined by AI</title>
-  <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@300;400&display=swap" rel="stylesheet">
+
+
 </head>
 
+<style>
+  :root {
+    --color-teal-blue: #42A7C3;
+    --color-deep-navy: #1A2B4C;
+    --color-coral: #FF6F61;
+    --color-bubblegum-pink: #FF6BAA;
+    --color-light-gray: #E0E0E0;
+    --color-cream: #FDF6EC;
+    --color-charcoal: #333333;
+    --color-white: #FFFFFF;
+  }
+
+  .steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .step-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+
+  .step-icon-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .step-icon-box:hover {
+    transform: scale(1.05);
+  }
+
+  .arrow {
+    font-size: 48px;
+    color: var(--color-teal-blue, #00bcd4);
+  }
+
+  /* Individual Colors */
+  .develop {
+    background-color: #6a1b9a;
+  }
+
+  /* Purple */
+  .discovery {
+    background-color: #0277bd;
+  }
+
+  /* Blue */
+  .solution {
+    background-color: #00897b;
+  }
+
+  /* Teal */
+  .alignment {
+    background-color: #f9a825;
+  }
+
+  /* Amber */
+  .delivery {
+    background-color: #d84315;
+  }
+
+  /* Deep Orange */
+  .handover {
+    background-color: #2e7d32;
+  }
+
+  /* Green */
+  .sustain {
+    background-color: #455a64;
+  }
+
+  /* Blue Grey */
+
+
+  html,
+  body {
+     font-family: 'Rajdhani', sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+    margin: 0;
+  }
+
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-teal-blue);
+  }
+
+  .p {
+    margin-bottom:0;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    background-color: var(--color-cream);
+    min-height: 100vh;
+  }
+
+  .logo {
+    height: 70px;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .oblongix-hero {
+    background-color: var(--color-light-gray);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .oblongix-hero h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .oblongix-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0
+  }
+
+  .step-box {
+    background-color: var(--color-teal-blue);
+    color: var(--color-white);
+    padding: 10px 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .oblongix-tiles {
+    background-color: var(--color-cream);
+    padding: 2rem 1rem;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .tile {
+    background-color: var(--color-light-gray);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    transition: transform 0.2s ease;
+    text-align: center;
+  }
+
+  .contact-button {
+    background-color: var(--color-coral);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .contact-button:hover {
+    background-color: var(--color-bubblegum-pink);
+  }
+
+  button {
+    background-color: var(--color-teal-blue);
+    border: none;
+    border-radius: 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: var(--color-bubblegum-pink);
+    color: var(--color-white);
+  }
+
+  .carousel-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-img {
+    min-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .carousel-btn {
+    background-color: var(--color-teal-blue);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  .modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    height: 100%;
+    inset: 0;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background-color: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
+    max-width: 480px;
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    font-size: 1rem;
+    /* 16px or adjust as needed */
+    padding: 1rem;
+  }
+
+  .modal-content h2 {
+    color: var(--color-deep-navy);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .close {
+    color: var(--color-charcoal);
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+  }
+
+  /* Mobile Layout Adjustments */
+  @media (max-width: 768px) {
+    .main {
+      margin: 0;
+    }
+
+    .carousel-section {
+      margin: 2rem 0;
+      padding: 0 1rem;
+    }
+
+    .carousel {
+      width: 100%;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .grid-3 {
+      margin-left: 0;
+      grid-template-columns: 1fr;
+    }
+
+    .oblongix-hero {
+      padding: 1.5rem 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .steps-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin: 1rem auto;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .step-icon-box {
+      width: 140px;
+      height: 140px;
+      font-size: 18px;
+    }
+
+    .step-icon-box i {
+      font-size: 54px;
+    }
+
+    .arrow {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .step-icon-box {
+      width: 120px;
+      height: 120px;
+      font-size: 16px;
+    }
+
+    .step-icon-box i {
+      font-size: 44px;
+    }
+
+    .arrow {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .steps-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .arrow {
+      transform: rotate(90deg);
+    }
+  }
+</style>
+
 <body>
+  <!-- Contact Modal -->
   <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
     <div class="modal-content">
       <span class="close" onclick="closeContactModal()">&times;</span>
@@ -22,172 +434,205 @@
     </div>
   </div>
 
-  <main class="main" style="padding:1 rem;">
-    <div style="text-align: center;">
-      <img src="Oblongix Logo.png" alt="Oblongix Logo" />
+  <main class="main" style="padding:1rem;">
+    <section style="position: relative; height: 100vh; overflow: hidden;">
+  <img src="rocket_launch.png" alt="The rocket for Consulting"
+       style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+
+  <!-- Overlay text -->
+  <div style="position: absolute; bottom: 40%; right: 5%;
+              color: white; font-size: 3em; font-weight: bold;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+    Coming soon...
+  </div>
+  <div style="position: absolute; bottom: 20%; right: 5%;
+              color: white; font-size: 2.5em; font-weight: bold;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+    Business Consulting Redefined by AI
+  </div>
+
+  <!-- Scroll cue button -->
+  <div style="text-align: center; position: absolute; bottom: 10px; width: 100%;">
+    <button onclick="scrollToNext()"
+            style="background: none; border: none; font-size: 2rem; color: white; cursor: pointer;"
+            aria-label="Scroll down">
+      ⬇
+    </button>
+  </div>
+</section>
+    
+    <section style="position: relative; height: 100vh; overflow-y: auto; scroll-snap-align: start;">
+<div style="text-align: center;">
+      <img src="Oblongix Logo.png" alt="Oblongix Logo" style="margin-top:2rem;" />
     </div>
 
-    <div style="position: relative; width: 100%;">
-      <img src="rocket_launch.png" alt="The rocket for Consulting" style="width: 100%; display: block;" />
-      <div style="position: absolute; bottom: 20%; left:10%; color: white; font-size: 2.5em;
-                  font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">The Rocket for Consulting</div>
-    </div>
+      <div class="oblongix-hero">
+        <h2>AI delivered Business Consulting</h2>
+        <p>Next-gen Business Consulting using leading-edge AI technology combined with human expertise to achieve rapid business value.</p>
 
-    <div class="oblongix-hero">
-      <h2>AI delivered Business Consulting</h2>
-      <p>Next-gen business consulting using leading-edge AI technology combined with human expertise to achieve rapid business value.</p>
-      <div class="steps-wrapper" style="display: flex; justify-content: center; gap: 1 rem;">
-        <div class="steps-container">
-          <div class="step-box" title="Develop AI enabled Business Solutions">Develop</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Use AI to understand your challenges, objectives, and business context.">Discovery</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Match your needs to our AI-driven or hybrid business solutions.">Solution</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Align with stakeholders, scope the engagement, and confirm value targets.">Alignment</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Deploy the agreed solution using AI-driven agile delivery and real-time feedback loops.">Delivery</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Transfer knowledge from engagement, train users, and embed capabilities.">Handover</div>
-          <span style="color: var(--color-teal-blue);">→</span>
-          <div class="step-box" title="Support ongoing impact tracking, updates, and value realization.">Sustain</div>
+        <div class="steps-wrapper">
+          <div class="steps-container">
+            <div class="step-icon-box develop" title="Develop AI enabled Business Solutions">
+              <i class="fas fa-lightbulb"></i>
+              <div>Develop</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box discovery" title="Use AI to understand your challenges, objectives, and business context.">
+              <i class="fas fa-search"></i>
+              <div>Discovery</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box solution" title="Match your needs to our AI-driven or hybrid business solutions.">
+              <i class="fas fa-puzzle-piece"></i>
+              <div>Solution</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box alignment" title="Align with stakeholders, scope the engagement, and confirm value targets.">
+              <i class="fas fa-users-cog"></i>
+              <div>Alignment</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box delivery" title="Deploy the agreed solution using AI-driven agile delivery and real-time feedback loops.">
+              <i class="fas fa-rocket"></i>
+              <div>Delivery</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box handover" title="Transfer knowledge from engagement, train users, and embed capabilities.">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <div>Handover</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step-icon-box sustain" title="Support ongoing impact tracking, updates, and value realization.">
+              <i class="fas fa-chart-line"></i>
+              <div>Sustain</div>
+            </div>
+          </div>
+
+          <p style="margin-bottom:0; margin-top:1rem;">An end-to-end AI-powered platform that automates Consulting engagements
+            from problem discovery, solution selection to delivery
+            with global marketplace scalable architecture.</p>
+          <p style="margin-bottom:0;">Anyone can access advanced Business Consulting, delivered at speed at a fraction of the cost</p>
         </div>
       </div>
-      <br>
-      <p>An end-to-end AI-powered platform that automates consulting engagements — from problem discovery, solution selection to delivery — with marketplace and composable architecture features.</p>
-    </div>
 
-    <div class="oblongix-tiles grid-3" style="text-align: center;">
-      <a class="tile" aria-label="Explore AI Solutions">
-        <h3>AI Solutions</h3>
-        <p>Apply advanced AI business solutions immediately.</p>
-      </a>
-      <a class="tile" aria-label="Explore AI with Human Support">
-        <h3>AI with Human Support</h3>
-        <p>Leverage the power of AI to accelerate human performance, or provide expertise and oversight where AI cannot.</p>
-      </a>
-      <a class="tile" aria-label="Explore Human-led with AI Tools">
-        <h3>Human with AI Tools</h3>
-        <p>Sometimes, human leadership is essential—but amplified with AI, it's far more effective.</p>
-      </a>
-    </div>
+      <div class="oblongix-tiles grid-3" style="text-align: center;">
+        <a class="tile" aria-label="Explore AI Solutions">
+          <h3>AI Driven Solutions</h3>
+          <p>Use Business Solutions straight 'out of the box' immediately.</p>
+        </a>
+        <a class="tile" aria-label="Explore AI with Human Support">
+          <h3>AI with Human Support</h3>
+          <p>Leverage the power of AI to accelerate human performance, or provide expertise and oversight where AI cannot.</p>
+        </a>
+        <a class="tile" aria-label="Explore Human-led with AI Tools">
+          <h3>Human with AI Tools</h3>
+          <p>Sometimes, human leadership is essential—but amplified with AI, it's far more effective.</p>
+        </a>
+      </div>
 
-    <div class="carousel-section">
-      <h2 style="text-align: left; padding-top:0;">Pre-Release Platform Previews</h2>
-      <div class="carousel">
-        <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
-        <div class="carousel-track">
-          <img src="homepage.png" alt="homepage" class="carousel-img" />
-          <img src="solutions.png" alt="All solutions" class="carousel-img" />
-          <img src="tools.png" alt="External tools and interfaces" class="carousel-img" />
-          <img src="Data.png" alt="AI processed data" class="carousel-img" />
-          <img src="Engagements.png" alt="Current Engagements" class="carousel-img" />
-          <img src="Engagement detail.png" alt="AI driven detail of engagements" class="carousel-img" />
-          <img src="Delivery.png" alt="Project in process of delivery" class="carousel-img" />
+      <div class="oblongix-hero">
+        <div class="discover-container">
+          <B>Early Stage Adopter or Interested Investor?   </B>
+          <a class="contact-button" onclick="openContactModal()">Get in Touch</a>
         </div>
-        <button class="carousel-btn next" onclick="nextSlide()">❯</button>
       </div>
-    </div>
-    <br>
-    <div class="oblongix-hero">
-      <div class="discover-container">
-        <p>Early Stage Adopter or Interested Investor ? </p>
-        <p>Contact us to learn more!</p>
-        <a class="contact-button" onclick="openContactModal()">Get in Touch</a>
-      </div>
-    </div>
 
+    </section>
   </main>
-</body>
-<script>
-  let currentIndex = 0;
 
-  function updateCarousel() {
-    const track = document.querySelector('.carousel-track');
-    const totalSlides = document.querySelectorAll('.carousel-img').length;
-    if (!track) return;
+  <script>
+    function scrollToNext() {
+      const next = document.querySelector('section:nth-of-type(2)');
+      if (next) {
+        next.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+    let currentIndex = 0;
 
-    // Wrap around logic
-    if (currentIndex < 0) currentIndex = totalSlides - 1;
-    if (currentIndex >= totalSlides) currentIndex = 0;
+    function updateCarousel() {
+      const track = document.querySelector('.carousel-track');
+      const totalSlides = document.querySelectorAll('.carousel-img').length;
+      if (!track) return;
 
-    const offset = -currentIndex * 100;
-    track.style.transform = `translateX(${offset}%)`;
-  }
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
 
-  function prevSlide() {
-    currentIndex--;
-    updateCarousel();
-  }
-
-  function nextSlide() {
-    currentIndex++;
-    updateCarousel();
-  }
-
-  document.addEventListener('DOMContentLoaded', updateCarousel);
-
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const data = {
-      name: this.elements["name"].value.trim(),
-      email: this.elements["email"].value.trim(),
-      message: this.elements["message"].value.trim()
-    };
-
-    console.log(data)
-
-    if (!data.name || !data.email || !data.message) {
-      alert('Please fill in all fields.');
-      return;
+      const offset = -currentIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
     }
 
-    fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    }).then(response => {
-      if (response.ok) {
-        alert("Message sent successfully!");
-        closeContactModal();
-        this.reset();
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    }).catch(err => {
-      console.error("Contact form error:", err);
-      alert("Error sending message. Please try again.");
+    function prevSlide() {
+      currentIndex--;
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      currentIndex++;
+      updateCarousel();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCarousel();
+
+      document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = {
+          name: this.elements["name"].value.trim(),
+          email: this.elements["email"].value.trim(),
+          message: this.elements["message"].value.trim()
+        };
+
+        if (!data.name || !data.email || !data.message) {
+          alert('Please fill in all fields.');
+          return;
+        }
+
+        fetch("/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        }).then(response => {
+          if (response.ok) {
+            alert("Message sent successfully!");
+            closeContactModal();
+            this.reset();
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        }).catch(err => {
+          console.error("Contact form error:", err);
+          alert("Error sending message. Please try again.");
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeContactModal();
+        }
+      });
+
+      window.onclick = function(event) {
+        const contactModal = document.getElementById('contactModal');
+        if (event.target === contactModal) {
+          closeContactModal();
+        }
+      };
     });
-  });
 
-  function openContactModal() {
-    const modal = document.getElementById("contactModal");
-    if (modal) modal.style.display = "block";
-  }
+    function openContactModal() {
+      const modal = document.getElementById("contactModal");
+      if (modal) modal.style.display = "block";
+    }
 
-  function closeContactModal() {
-    const modal = document.getElementById("contactModal");
-    if (modal) modal.style.display = "none";
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeContactModal();
-      }
-    });
-
-    window.onclick = function(event) {
-      const contactModal = document.getElementById('contactModal');
-      if (event.target === contactModal) {
-        closeContactModal();
-      }
-    };
-  });
-</script>
+    function closeContactModal() {
+      const modal = document.getElementById("contactModal");
+      if (modal) modal.style.display = "none";
+    }
+  </script>
+</body>
 
 </html>
