@@ -108,11 +108,16 @@ section {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3 {
+h1 {
+  position: absolute;
+  right: 5%;
+  bottom:40%;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  margin: 0;
   font-family: 'Orbitron', sans-serif;
-  color: var(--color-teal-blue);
 }
 
 .p {
