@@ -22,7 +22,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin: 30px 0;
+  margin: 1.5rem;
 }
 
 .step-icon-box {
@@ -216,6 +216,11 @@ h2,h3 {
 .contact-button:hover {
   background-color: var(--color-bubblegum-pink);
 }
+
+
+.li { text-align:left;}
+.ul {list-style-position: inside;}
+
 
 /* Mobile Layout Adjustments */
 @media (max-width: 768px) {
