@@ -112,7 +112,7 @@ h1 {
   position: absolute;
   right: 5%;
   bottom:40%;
-  color: white;
+  color: var(--color-teal-blue);
   font-size: 2em;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
@@ -123,7 +123,6 @@ h1 {
 h3 {
   color: var(--color-teal-blue);
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   font-family: 'Orbitron', sans-serif;
 }
 
