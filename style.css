@@ -120,6 +120,13 @@ h1 {
   font-family: 'Orbitron', sans-serif;
 }
 
+h3 {
+  color: var(--color-teal-blue);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-family: 'Orbitron', sans-serif;
+}
+
 .p {
   margin-bottom: 0;
 }
