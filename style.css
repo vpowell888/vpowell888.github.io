@@ -110,8 +110,6 @@ html {
   border: 1px solid #000;
   margin-top: 10px;
 }
-
-/* ✅ Mobile Responsiveness */
 @media (max-width: 768px) {
   .hero-text {
     flex-direction: column;
@@ -161,5 +159,38 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .main section:nth-of-type(1) .flex-rocket {
+    flex-direction: column;
+  }
+
+  .main section:nth-of-type(1) .flex-rocket > div:first-child img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+
+  .main section:nth-of-type(1) .flex-rocket > div:last-child {
+    text-align: center !important;
+  }
+
+   .rocket-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .main section:nth-of-type(1) > div > div:nth-child(3) {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .main section:nth-of-type(1) > div > div:nth-child(3) > div {
+    width: 100% !important;
+    text-align: center !important;
   }
 }
