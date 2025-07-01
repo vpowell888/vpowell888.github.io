@@ -111,6 +111,11 @@ html {
   margin-top: 10px;
 }
 @media (max-width: 768px) {
+
+   .oblongix-logo {
+    width: 1.5rem; 
+  }
+
   .hero-text {
     flex-direction: column;
     margin: 0 1rem;
