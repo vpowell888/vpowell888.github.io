@@ -211,6 +211,12 @@ html {
     text-align: center;
   }
 
+    .step-group {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
   .main section:nth-of-type(1) .flex-rocket {
     flex-direction: column;
   }
