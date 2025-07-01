@@ -9,9 +9,9 @@ html {
 }
 
 .oblongix-logo {
-    width: 2rem; 
-    height: auto;
-  }
+  max-width: 120px;
+  height: auto;
+}
 
 .hero-text {
   display: flex;
@@ -117,7 +117,11 @@ html {
 }
 @media (max-width: 768px) {
 
-  
+   .oblongix-logo {
+    width: 40px;
+    height: auto;
+  }
+}  
   .hero-text {
     flex-direction: column;
     margin: 0 1rem;
