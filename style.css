@@ -2,6 +2,20 @@ html {
   font-family: 'Segoe UI', sans-serif;
 }
 
+.box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 30px;
+  min-width: 240px;
+  text-align: left;
+  position: relative;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
 .oblongix-hero {
   background-color: #e6e9e8;
   padding: 2rem;
@@ -69,6 +83,31 @@ html {
   gap: 0.5rem;
   text-align: center;
 }
+
+.step-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin:0;
+}
+
+.step-box {
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step .icon {
+  margin-right: 8px;
+}
+
 
 .arrow {
   font-size: 2rem;
