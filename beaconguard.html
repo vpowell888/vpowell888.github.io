@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeaconGuard — Wi‑Fi Spectrum & Intruder Detection</title>
+    <meta name="description" content="BeaconGuard — Detect Wi‑Fi spectrum changes and potential intruders using passive monitoring and anomaly detection." />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="/favicon.png" sizes="256x256" type="image/png">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <meta name="msapplication-TileImage" content="/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="site-brand">
+          <img class="site-logo" src="Oblongix-logo.png" alt="Oblongix Logo">
+        </a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#oblongix">Solutions</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="mailto:contact@oblongix.com" class="btn btn-ghost">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-ghost">
+            <span class="theme-icons">
+              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zM17.24 19.16l1.79 1.8 1.79-1.79-1.8-1.8-1.78 1.79zM20 11v2h3v-2h-3zM12 4a8 8 0 100 16 8 8 0 000-16zM4.22 4.22L2.81 5.63l1.79 1.79 1.41-1.41L4.22 4.22zM19.78 4.22l-1.41 1.41 1.79 1.79 1.41-1.41-1.79-1.79z"></path></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <h1>BeaconGuard</h1>
+            <p class="muted">Wi‑Fi spectrum change detection and intruder awareness for wireless environments.</p>
+            <p>BeaconGuard monitors wireless beacons and spectrum characteristics to detect significant changes, anomalies, and potential intruder activity. It is designed for passive monitoring, rapid alerts, and integration with security workflows.</p>
+            <p style="margin-top:1rem">
+              <a class="btn btn-primary" href="mailto:contact@oblongix.com">Request Demo</a>
+              <a class="btn btn-ghost" href="#details" style="margin-left:0.6rem">Learn more</a>
+            </p>
+          </div>
+          <div>
+            <img class="hero-logo" src="assets/images/beaconguard-icon.svg" alt="BeaconGuard" style="max-width:220px">
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="container" style="margin-top:2rem">
+        <h2>Overview</h2>
+        <p>BeaconGuard provides continuous monitoring of Wi‑Fi signals and metadata to identify changes in the radio environment that may indicate interference, rogue APs, or physical intrusions. It combines lightweight agents, signal analysis, and anomaly detection models to surface actionable alerts.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>Passive Wi‑Fi beacon collection (SSID/BSSID/channel/strength)</li>
+          <li>Spectrum change detection and trending</li>
+          <li>Anomaly scoring and alerting for rogue devices</li>
+          <li>Integration hooks for SIEM and incident workflows</li>
+          <li>Lightweight on‑prem or edge deployment</li>
+        </ul>
+
+        <h3>How it works</h3>
+        <ol>
+          <li>Agents capture beacon frames and summary spectrum metrics.</li>
+          <li>Data is aggregated and baseline behaviour models are created.</li>
+          <li>Real‑time changes are scored against baselines and thresholds.</li>
+          <li>Alerts are emitted with context and recommended next steps.</li>
+        </ol>
+
+        <h3>Installation (placeholder)</h3>
+        <p>Provide repository or README to populate exact install steps. Typical deployment options include Raspberry Pi agents, containerised collectors, or integration with existing wireless sensors.</p>
+
+        <h3>Requirements</h3>
+        <ul>
+          <li>Linux (recommended) or lightweight edge OS</li>
+          <li>Wi‑Fi adapter supporting monitor mode (for passive capture)</li>
+          <li>Network access for optional aggregator/console</li>
+        </ul>
+
+        <h3>Get the code / Contribute</h3>
+        <p>If you have the BeaconGuard repository or a README, upload it or share a link and I will update this page with installation, usage examples, and configuration guidance. For now, use the contact link below to request access or a demo.</p>
+
+        <p style="margin-top:1rem"><a class="btn btn-primary" href="mailto:contact@oblongix.com">Contact for repo / demo</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="muted">© 2026 Oblongix</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html#oblongix">Solutions</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="mailto:contact@oblongix.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="assets/js/theme-toggle.js"></script>
+  </body>
+</html>

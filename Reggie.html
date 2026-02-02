@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reggie — Regulatory Document Processing</title>
+    <meta name="description" content="Reggie ingests regulatory documents, extracts obligations, and orchestrates actions to meet compliance requirements." />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="/favicon.png" sizes="256x256" type="image/png">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <meta name="msapplication-TileImage" content="/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="site-brand">
+          <img class="site-logo" src="Oblongix-logo.png" alt="Oblongix Logo">
+        </a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#oblongix">Solutions</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="mailto:contact@oblongix.com">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-ghost">
+            <span class="theme-icons">
+              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zM17.24 19.16l1.79 1.8 1.79-1.79-1.8-1.8-1.78 1.79zM20 11v2h3v-2h-3zM12 4a8 8 0 100 16 8 8 0 000-16zM4.22 4.22L2.81 5.63l1.79 1.79 1.41-1.41L4.22 4.22zM19.78 4.22l-1.41 1.41 1.79 1.79 1.41-1.41-1.79-1.79z"></path></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <h1>Reggie</h1>
+            <p class="muted">Automated regulatory document processing — extract obligations, map controls, and trigger compliance actions.</p>
+            <p>Reggie ingests regulatory filings, contracts, and policy documents, then extracts structured obligations, deadlines, and responsibilities. It maps extracted items to controls and workflows, creating actionable tasks to keep teams compliant.</p>
+            <p style="margin-top:1rem">
+              <a class="btn btn-primary" href="mailto:contact@oblongix.com">Request Demo</a>
+              <a class="btn btn-ghost" href="#details" style="margin-left:0.6rem">Learn more</a>
+            </p>
+          </div>
+          <div>
+            <img class="hero-logo" src="assets/images/reggie-icon.svg" alt="Reggie icon" style="max-width:220px">
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="container" style="margin-top:2rem">
+        <h2>Overview</h2>
+        <p>Reggie transforms unstructured regulatory and contractual text into structured, auditable obligations. It supports regulatory monitoring, control mapping, remediation tasking, and audit evidence collection.</p>
+
+        <h3>Key Capabilities</h3>
+        <ul>
+          <li>Document ingestion (PDF, DOCX, text) with OCR for scanned pages</li>
+          <li>Natural Language Extraction: obligations, clauses, dates, parties</li>
+          <li>Regulatory mapping: map obligations to controls and policies</li>
+          <li>Automated actions: create tasks, schedule reviews, generate reports</li>
+          <li>Audit trails & evidence packaging for regulators</li>
+        </ul>
+
+        <h3>How Reggie Works</h3>
+        <ol>
+          <li>Ingest documents via UI, API, or folder sync.</li>
+          <li>Preprocess text (OCR, normalization, language detection).</li>
+          <li>Run NLP extractors to identify obligations, dates, and parties.</li>
+          <li>Map items to control frameworks and generate tasks or alerts.</li>
+          <li>Track remediation and package evidence for audits.</li>
+        </ol>
+
+        <h3>Example Use Cases</h3>
+        <ul>
+          <li>Regulatory change ingestion and impact assessment</li>
+          <li>Contract compliance monitoring (SLAs, reporting obligations)</li>
+          <li>Automated remediation task generation and assignment</li>
+          <li>Evidence collection and compliance reporting for auditors</li>
+        </ul>
+
+        <h3>Requirements & Deployment</h3>
+        <p>Reggie can run as a cloud service or on-prem for sensitive workflows. Required components typically include document storage, an NLP service, and a task orchestration engine. Share the repository or README and I will add exact deployment instructions.</p>
+
+        <h3>Integration Points</h3>
+        <ul>
+          <li>SIEM / ticketing systems (Jira, ServiceNow) for tasking</li>
+          <li>Document stores (S3, SharePoint, local NAS)</li>
+          <li>Policy and control frameworks (mapping repositories)</li>
+          <li>Audit and reporting tools</li>
+        </ul>
+
+        <p style="margin-top:1rem"><a class="btn btn-primary" href="mailto:contact@oblongix.com">Contact to get code / demo</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="muted">© 2026 Oblongix</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html#oblongix">Solutions</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="mailto:contact@oblongix.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="assets/js/theme-toggle.js"></script>
+  </body>
+</html>
