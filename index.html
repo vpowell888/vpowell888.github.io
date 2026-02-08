@@ -106,6 +106,92 @@
       border: 1px solid rgba(143, 182, 255, 0.28);
       background: linear-gradient(155deg, rgba(15, 35, 72, 0.96) 0%, rgba(10, 24, 50, 0.95) 100%);
     }
+    .service-detail-btn {
+      margin-top: 0.75rem;
+      border: 1px solid rgba(16, 38, 76, 0.24);
+      background: #f2f7ff;
+      color: #10264c;
+      border-radius: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.45rem 0.75rem;
+      transition: all 120ms ease;
+    }
+    .service-detail-btn:hover { background: #e3efff; border-color: rgba(16, 38, 76, 0.38); }
+    .service-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(7, 17, 36, 0.65);
+      padding: 1rem;
+      backdrop-filter: blur(2px);
+    }
+    .service-modal-backdrop.open { display: flex; }
+    .service-modal {
+      width: min(920px, 100%);
+      max-height: calc(100vh - 2rem);
+      overflow: auto;
+      border: 1px solid rgba(16, 38, 76, 0.2);
+      border-radius: 1rem;
+      background: linear-gradient(180deg, #f7faff 0%, #f0f6ff 100%);
+      box-shadow: 0 30px 90px rgba(9, 21, 45, 0.35);
+    }
+    .service-modal-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1rem 1.1rem;
+      border-bottom: 1px solid rgba(16, 38, 76, 0.12);
+      background: rgba(243, 249, 255, 0.97);
+      backdrop-filter: blur(6px);
+    }
+    .service-modal-close {
+      border: 1px solid rgba(16, 38, 76, 0.22);
+      border-radius: 0.75rem;
+      background: #ffffff;
+      color: #10264c;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.4rem 0.65rem;
+      line-height: 1.2;
+    }
+    .service-modal-close:hover { border-color: rgba(16, 38, 76, 0.38); }
+    .service-modal-body { padding: 1.1rem; color: #1e3760; }
+    .service-modal-grid { display: grid; gap: 1rem; }
+    .service-modal-block {
+      border: 1px solid rgba(16, 38, 76, 0.12);
+      background: #ffffff;
+      border-radius: 0.9rem;
+      padding: 0.9rem;
+    }
+    .service-modal-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5a6d90;
+      font-weight: 700;
+    }
+    .service-modal-list {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: #2a4269;
+    }
+    .service-modal-list li + li { margin-top: 0.38rem; }
+    .service-modal-copy {
+      margin-top: 0.5rem;
+      font-size: 0.93rem;
+      line-height: 1.52;
+      color: #2a4269;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -246,6 +332,7 @@
                 <li>- Vendor and investment decision reviews</li>
                 <li>- Strategic sounding board</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="executive-ai-advisor">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Board-level AI advisory</div>
@@ -254,6 +341,7 @@
                 <li>- Clarify risk and opportunity posture</li>
                 <li>- Support investor and regulator readiness</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="board-level-ai-advisory">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Startup advisory</div>
@@ -262,6 +350,7 @@
                 <li>- Positioning and scale strategy</li>
                 <li>- Responsible AI operating principles</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="startup-advisory">View service details</button>
             </div>
           </div>
           <div class="mt-4 rounded-2xl border border-[rgba(16,38,76,0.1)] bg-[#f4f8ff] p-4 text-sm text-[#3b5478]">
@@ -281,6 +370,7 @@
                 <li>- Data requirements</li>
                 <li>- Legal, ethical, and security risks</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="ai-strategy-design">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">AI transformation roadmap</div>
@@ -289,6 +379,7 @@
                 <li>- Budget estimates</li>
                 <li>- Role, team, and governance changes</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="ai-transformation-roadmap">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Delivery oversight</div>
@@ -297,15 +388,17 @@
                 <li>- Workflow automation</li>
                 <li>- Analytics and forecasting tools</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="delivery-oversight">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Fundamentals</div>
               <ul class="mt-2 space-y-1">
-                <li>- Data Strategyand deployment</li>
+                <li>- Data strategy and deployment</li>
                 <li>- Executive AI pilots</li>
                 <li>- Workflow automation</li>
                 <li>- Tool deployment</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="fundamentals">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Assessments</div>
@@ -315,6 +408,7 @@
                 <li>- AI Literacy / Training needs</li>
                 <li>- AI Architecture</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="assessments">View service details</button>
             </div>
             <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
               <div class="font-semibold text-[#10264c]">Reporting & Analytics</div>
@@ -324,6 +418,7 @@
                 <li>- Advanced Analytics</li>
                 <li>- Forecasting and scenario planning</li>
               </ul>
+              <button type="button" class="service-detail-btn" data-service-modal="reporting-analytics">View service details</button>
             </div>
           </div>
           <div class="mt-4 rounded-2xl border border-[rgba(16,38,76,0.1)] bg-[#f4f8ff] p-4 text-sm text-[#3b5478]">
@@ -336,23 +431,51 @@
           <div class="panel rounded-3xl p-6">
             <div class="text-lg font-semibold text-[#10264c]">3. Speaking and Keynotes </div>
             <p class="mt-2 text-sm text-[#42597c]">Paid speaking for conferences, offsites, and leadership forums.</p>
-            <ul class="mt-3 space-y-1 text-sm text-[#42597c]">
-              <li>- Executive keynote topics: "AI transformation without chaos" and "What CEOs must do in the next 24 months"</li>
-              <li>- Private corporate talks for leadership summits and strategy kickoffs</li>
-              <li>- Conference appearances for high-visibility market positioning</li>
-            </ul>
+            <div class="mt-4 grid gap-3 text-sm text-[#42597c]">
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Executive keynotes</div>
+                <div class="mt-1">Reframe AI as leadership, operating model, and risk redesign.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="executive-keynotes">View service details</button>
+              </div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Private corporate talks</div>
+                <div class="mt-1">Tailored talks for offsites and strategy sessions.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="private-corporate-talks">View service details</button>
+              </div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Conference speaking & market positioning</div>
+                <div class="mt-1">Thought leadership for visibility and market trust.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="conference-speaking-market-positioning">View service details</button>
+              </div>
+            </div>
             <p class="mt-3 text-sm text-[#3b5478]">The book acts as proof of a coherent point of view to support individual client initiatives.</p>
           </div>
 
           <div class="panel rounded-3xl p-6">
             <div class="text-lg font-semibold text-[#10264c]">4. Workshops and Executive Education</div>
             <p class="mt-2 text-sm text-[#42597c]">Interactive sessions that bridge speaking and consulting.</p>
-            <ul class="mt-3 space-y-1 text-sm text-[#42597c]">
-              <li>- Half-day and full-day executive workshops</li>
-              <li>- Small-group leadership intensives</li>
-              <li>- AI literacy training for non-technical leaders</li>
-              <li>- Core themes: AI for CEOs, AI-ready operating models, risk/governance/ethics</li>
-            </ul>
+            <div class="mt-4 grid gap-3 text-sm text-[#42597c]">
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Executive workshops (half-day / full-day)</div>
+                <div class="mt-1">Working sessions on value, workflows, governance, and ownership.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="executive-workshops">View service details</button>
+              </div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Small-group leadership intensives</div>
+                <div class="mt-1">Deep-dive sessions for high-stakes leadership decisions.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="small-group-leadership-intensives">View service details</button>
+              </div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">AI literacy for non-technical leaders</div>
+                <div class="mt-1">Practical governance literacy for executives.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="ai-literacy-non-technical-leaders">View service details</button>
+              </div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+                <div class="font-semibold text-[#10264c]">Themed education sessions</div>
+                <div class="mt-1">Operating model, risk, governance, and ethics sessions.</div>
+                <button type="button" class="service-detail-btn" data-service-modal="themed-education-sessions">View service details</button>
+              </div>
+            </div>
             <p class="mt-3 text-sm text-[#3b5478]">The book provides pre-reads, shared language, and a clear methodology.</p>
             
           </div>
@@ -466,6 +589,35 @@
     </footer>
   </main>
 
+  <div id="serviceModalBackdrop" class="service-modal-backdrop" aria-hidden="true">
+    <div id="serviceModal" class="service-modal" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+      <div class="service-modal-head">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-[0.16em] text-[#5a6d90]">Service details</div>
+          <h3 id="serviceModalTitle" class="mt-1 section-heading text-2xl font-semibold tracking-tight text-[#10264c]"></h3>
+        </div>
+        <button id="serviceModalClose" type="button" class="service-modal-close" aria-label="Close service details">Close</button>
+      </div>
+      <div class="service-modal-body">
+        <div class="service-modal-grid">
+          <div class="service-modal-block">
+            <div class="service-modal-label">What It Does</div>
+            <p id="serviceModalWhat" class="service-modal-copy"></p>
+          </div>
+          <div class="service-modal-block">
+            <div class="service-modal-label">Client Deliverable</div>
+            <ul id="serviceModalDeliverables" class="service-modal-list"></ul>
+          </div>
+          <div class="service-modal-block">
+            <div class="service-modal-label">Book Principles Addressed</div>
+            <ul id="serviceModalPrinciples" class="service-modal-list"></ul>
+            <p id="serviceModalBookLink" class="service-modal-copy"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -475,6 +627,288 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const serviceModalContent = {
+      "executive-ai-advisor": {
+        title: "Executive AI Advisor",
+        what: "An ongoing advisory relationship for CEOs and senior executives who need clarity, confidence, and challenge as they lead AI as a business redesign.",
+        deliverables: [
+          "Regular executive advisory packs covering priorities, decisions, risks, and recommendations",
+          "Decision briefs on funding, vendors, organisational design, and escalation issues",
+          "Leadership-ready narrative that can be reused internally"
+        ],
+        principles: [
+          "Declare AI a business redesign, not a technology program",
+          "Retain agency as intelligence becomes external and cheap",
+          "Lead innovation with expectation of continued uncertainty"
+        ],
+        bookLink: "Directly supports CEOs to own outcomes and avoid delegation drift as AI reshapes decision rights."
+      },
+      "board-level-ai-advisory": {
+        title: "Board-level AI Advisory",
+        what: "Supports boards and executive committees in governing AI as a permanent enterprise issue by translating technical complexity into value, risk, accountability, and control.",
+        deliverables: [
+          "Board briefing decks on AI posture and exposure",
+          "AI risk and opportunity statements aligned to enterprise risk frameworks",
+          "Governance and oversight checklists for directors",
+          "Decision records suitable for board minutes"
+        ],
+        principles: [
+          "Govern AI like a material enterprise risk",
+          "The boardroom discussion",
+          "When AI fails, who is actually in control?"
+        ],
+        bookLink: "Operationalises board-level governance so AI is treated with the same seriousness as financial, cyber, and regulatory risk."
+      },
+      "startup-advisory": {
+        title: "Startup Advisory",
+        what: "Advisory support for AI-enabled startups focused on scale, positioning, and credibility, with strong execution discipline and responsible AI from the start.",
+        deliverables: [
+          "Positioning and differentiation guidance",
+          "Scale and operating model plan",
+          "Responsible AI operating principles for quality, control, and trust"
+        ],
+        principles: [
+          "AI magnifies organisational strengths and weaknesses",
+          "Competing when AI collapses differentiation",
+          "Retaining agency"
+        ],
+        bookLink: "Helps founders avoid scaling technical capability faster than organisational control or customer trust."
+      },
+      "ai-strategy-design": {
+        title: "AI Strategy Design",
+        what: "Defines where AI should be applied first, how value is created, and what trade-offs matter, explicitly tied to P&L, risk, and decision quality.",
+        deliverables: [
+          "Prioritised AI use-case portfolio",
+          "Value hypotheses and KPIs",
+          "Buy, build, and partner decisions",
+          "Data, platform, and risk requirements"
+        ],
+        principles: [
+          "Declare AI a business redesign",
+          "Measure what actually matters",
+          "Manage the AI dependency"
+        ],
+        bookLink: "Turns strategy into an investment discipline rather than a catalogue of ideas."
+      },
+      "ai-transformation-roadmap": {
+        title: "AI Transformation Roadmap",
+        what: "Turns strategy into an executable plan that leadership and boards can govern, with clear sequencing, ownership, capability build, and risk control.",
+        deliverables: [
+          "90-day, 6-month, and 12-month roadmap",
+          "Budget ranges and resourcing changes",
+          "Governance and decision rights model"
+        ],
+        principles: [
+          "Redesign how decisions are made",
+          "Lead innovation with expectation of uncertainty",
+          "Govern AI like enterprise risk"
+        ],
+        bookLink: "Prevents pilot purgatory by making AI transformation visible, owned, and staged."
+      },
+      "delivery-oversight": {
+        title: "Delivery Oversight",
+        what: "Provides executive-level control across pilots and production deployments to ensure AI lands in the business with adoption, risk control, and measurable value.",
+        deliverables: [
+          "Steering committee packs",
+          "Delivery dashboards and risk logs",
+          "Benefits tracking tied to outcomes"
+        ],
+        principles: [
+          "Embed AI into core workflows or stop funding it",
+          "When AI fails, who is actually in control?",
+          "Measure what actually matters"
+        ],
+        bookLink: "Ensures AI changes real work, not just demo outputs."
+      },
+      "fundamentals": {
+        title: "Fundamentals",
+        what: "Addresses data, tooling, and operating constraints that prevent AI from scaling, including ownership, quality, workflow automation, and operating cadence.",
+        deliverables: [
+          "Data strategy and ownership model",
+          "Tooling and workflow enablement plan",
+          "Target-state capability blueprint",
+          "Backlog of foundational fixes"
+        ],
+        principles: [
+          "Fix the data and operating foundations you've been avoiding",
+          "AI exposes organisational reality"
+        ],
+        bookLink: "Focuses on the foundational work that ultimately determines AI success or failure."
+      },
+      "assessments": {
+        title: "Assessments",
+        what: "Structured diagnostics across data, analytics, AI literacy, and architecture to establish readiness, constraints, and risk exposure before scaling.",
+        deliverables: [
+          "Maturity and gap assessment",
+          "Risk and constraint analysis",
+          "Prioritised remediation roadmap"
+        ],
+        principles: [
+          "Declare AI a business redesign",
+          "Measure what actually matters",
+          "Govern AI as enterprise risk"
+        ],
+        bookLink: "Creates a fact base for leadership decisions instead of optimism-driven funding."
+      },
+      "reporting-analytics": {
+        title: "Reporting & Analytics",
+        what: "Designs leadership-grade metrics that track value, decision quality, speed, and learning, replacing vanity metrics with outcome-based measurement.",
+        deliverables: [
+          "KPI trees tied to value creation",
+          "Dashboards and executive alerts",
+          "Forecasting and scenario models"
+        ],
+        principles: [
+          "Measure what actually matters",
+          "Decision quality and speed as value drivers"
+        ],
+        bookLink: "Makes AI impact visible, governed, and reinvested."
+      },
+      "executive-keynotes": {
+        title: "Executive Keynotes",
+        what: "High-impact keynotes that reframe AI as leadership, operating model, and risk redesign to create urgency and shared language at the top.",
+        deliverables: [
+          "Delivered keynote",
+          "Leadership-grade slide deck",
+          "Reusable executive narrative"
+        ],
+        principles: [
+          "Why this is different this time",
+          "Declare AI a business redesign",
+          "Retaining agency"
+        ],
+        bookLink: "Anchors leadership conversations in the same operating logic as the book."
+      },
+      "private-corporate-talks": {
+        title: "Private Corporate Talks",
+        what: "Tailored talks for offsites and strategy events that align leaders around priorities, trade-offs, and consequences.",
+        deliverables: [
+          "Custom leadership presentation",
+          "Discussion prompts",
+          "Post-session executive summary"
+        ],
+        principles: [
+          "The boardroom discussion",
+          "Redesign decision-making"
+        ],
+        bookLink: "Converts framework concepts into context-specific executive dialogue."
+      },
+      "conference-speaking-market-positioning": {
+        title: "Conference Speaking & Market Positioning",
+        what: "Thought leadership speaking that positions organisations as credible, execution-focused AI leaders.",
+        deliverables: [
+          "Conference keynote or panel appearance",
+          "Polished presentation materials"
+        ],
+        principles: [
+          "Competing when AI collapses differentiation"
+        ],
+        bookLink: "Strengthens external positioning using practical leadership principles from the book."
+      },
+      "executive-workshops": {
+        title: "Executive Workshops (Half-Day / Full-Day)",
+        what: "Working sessions that move leaders from awareness to decisions on value, workflows, governance, and ownership.",
+        deliverables: [
+          "Facilitated workshop",
+          "Decision summary and action plan"
+        ],
+        principles: [
+          "Redesign how decisions are made",
+          "Embed AI into core workflows"
+        ],
+        bookLink: "Turns boardroom concepts into concrete decisions with named ownership."
+      },
+      "small-group-leadership-intensives": {
+        title: "Small-Group Leadership Intensives",
+        what: "Deep-dive sessions for sensitive or complex AI decisions where authority, risk, or control is at stake.",
+        deliverables: [
+          "Confidential leadership decision record"
+        ],
+        principles: [
+          "When AI fails, who is actually in control?",
+          "Govern AI like enterprise risk"
+        ],
+        bookLink: "Designed for high-stakes executive decisions where accountability cannot be vague."
+      },
+      "ai-literacy-non-technical-leaders": {
+        title: "AI Literacy for Non-Technical Leaders",
+        what: "Builds practical understanding so leaders can govern AI credibly without becoming technologists.",
+        deliverables: [
+          "Executive learning pack",
+          "Leader checklists and mental models"
+        ],
+        principles: [
+          "Board and executive literacy as governance prerequisite"
+        ],
+        bookLink: "Builds the leadership literacy needed to ask better questions and govern risk."
+      },
+      "themed-education-sessions": {
+        title: "Themed Education Sessions (Operating Model, Risk, Ethics)",
+        what: "Focused sessions turning abstract principles into executable governance and operating practices.",
+        deliverables: [
+          "Reference templates and governance artifacts"
+        ],
+        principles: [
+          "Govern AI like a material enterprise risk",
+          "Retaining agency"
+        ],
+        bookLink: "Converts themes from the book into practical templates teams can execute immediately."
+      }
+    };
+
+    const serviceModalBackdrop = document.getElementById('serviceModalBackdrop');
+    const serviceModalTitle = document.getElementById('serviceModalTitle');
+    const serviceModalWhat = document.getElementById('serviceModalWhat');
+    const serviceModalDeliverables = document.getElementById('serviceModalDeliverables');
+    const serviceModalPrinciples = document.getElementById('serviceModalPrinciples');
+    const serviceModalBookLink = document.getElementById('serviceModalBookLink');
+    const serviceModalClose = document.getElementById('serviceModalClose');
+    let serviceModalLastFocus = null;
+
+    function setModalList(target, items) {
+      target.innerHTML = '';
+      items.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        target.appendChild(li);
+      });
+    }
+
+    function openServiceModal(serviceKey, triggerEl) {
+      const service = serviceModalContent[serviceKey];
+      if (!service || !serviceModalBackdrop) return;
+      serviceModalTitle.textContent = service.title;
+      serviceModalWhat.textContent = service.what;
+      setModalList(serviceModalDeliverables, service.deliverables || []);
+      setModalList(serviceModalPrinciples, service.principles || []);
+      serviceModalBookLink.textContent = service.bookLink || '';
+      serviceModalLastFocus = triggerEl || null;
+      serviceModalBackdrop.classList.add('open');
+      serviceModalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      serviceModalClose?.focus();
+    }
+
+    function closeServiceModal() {
+      if (!serviceModalBackdrop) return;
+      serviceModalBackdrop.classList.remove('open');
+      serviceModalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (serviceModalLastFocus) serviceModalLastFocus.focus();
+    }
+
+    document.querySelectorAll('[data-service-modal]').forEach((button) => {
+      button.addEventListener('click', () => openServiceModal(button.dataset.serviceModal, button));
+    });
+
+    serviceModalClose?.addEventListener('click', closeServiceModal);
+    serviceModalBackdrop?.addEventListener('click', (event) => {
+      if (event.target === serviceModalBackdrop) closeServiceModal();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && serviceModalBackdrop?.classList.contains('open')) closeServiceModal();
+    });
 
     function sendMail(e) {
       e.preventDefault();
