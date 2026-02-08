@@ -1,6 +1,11 @@
-# Oblongix Advisory — Services Overview
+# Oblongix Advisory — Services Aligned to *The CEO’s Guide to AI Transformation*
 
-This document describes each Oblongix Advisory service, outlining **what the service does** and **what the client receives**. It is intended for use as website copy, proposals, or internal reference material.
+This document describes each Oblongix Advisory service, explaining:
+1) What the service does  
+2) What the client receives  
+3) How the service directly supports the leadership principles set out in *The CEO’s Guide to AI Transformation*
+
+The book’s core premise is that AI success is determined by leadership, operating model redesign, and governance — not by technology alone.
 
 ---
 
@@ -8,28 +13,56 @@ This document describes each Oblongix Advisory service, outlining **what the ser
 
 ### Executive AI Advisor  
 **What it does**  
-An ongoing advisory relationship for senior leaders who need a trusted, independent sounding board as they shape and govern their AI agenda. This service focuses on clarifying where AI creates real business value, stress-testing assumptions, unblocking executive decisions, and maintaining leadership alignment as strategy, delivery, and risk evolve. Engagements typically include structured monthly or quarterly sessions, plus ad-hoc support around time-critical decisions.
+An ongoing advisory relationship for CEOs and senior executives who need clarity, confidence, and challenge as they lead AI as a business redesign. The focus is on decision-making, trade-offs, sequencing, and accountability rather than tools or pilots.
 
 **Client deliverable**  
-A set of **executive decision supports**, typically including a **monthly or quarterly advisory pack** (priorities, decisions required, risks, and recommended actions), along with **issue-specific briefs** such as options analysis, trade-off papers, and leadership-ready narrative.
+- Regular **executive advisory packs** (priorities, decisions required, risks, recommendations)  
+- **Decision briefs** on funding, vendors, organisational design, or escalation issues  
+- Leadership-ready narrative that can be reused internally
+
+**Book principles addressed**  
+- *Declare AI a business redesign, not a technology program*  
+- *Retain agency as intelligence becomes external and cheap*  
+- *Lead innovation with expectation of continued uncertainty*  
+
+This service helps CEOs personally own AI outcomes, avoid delegation drift, and retain control as AI reshapes decisions, roles, and power structures.
 
 ---
 
 ### Board-level AI Advisory  
 **What it does**  
-This service enables boards and executive committees to govern AI effectively by translating technical topics into business, value, and enterprise risk terms. It helps directors understand where AI creates upside, where it introduces material risk, what controls are proportionate, and what questions boards should be asking management. It also supports investor and regulator readiness by strengthening the organisation’s AI oversight posture.
+Supports boards and executive committees in governing AI as a permanent enterprise issue. Technical complexity is translated into value, risk, accountability, and control — enabling boards to challenge management effectively.
 
 **Client deliverable**  
-**Board-ready materials** such as a **board briefing deck**, an **AI risk and opportunity posture statement**, **governance and oversight checklists**, and concise **decision notes** suitable for inclusion in board minutes.
+- **Board briefing decks** on AI posture and exposure  
+- **AI risk and opportunity statements** aligned to enterprise risk frameworks  
+- **Governance and oversight checklists** for directors  
+- Decision records suitable for board minutes
+
+**Book principles addressed**  
+- *Govern AI like a material enterprise risk*  
+- *The boardroom discussion*  
+- *When AI fails, who is actually in control?*  
+
+This service operationalises board-level governance so AI is treated with the same seriousness as financial, cyber, or regulatory risk.
 
 ---
 
 ### Startup Advisory  
 **What it does**  
-Advisory support for startups building or scaling AI-enabled products, focused on positioning, differentiation, and sustainable scale. The service covers go-to-market clarity, operating cadence, investor narrative, and embedding responsible AI principles into product design and delivery to avoid avoidable risk around trust, quality, and compliance.
+Advisory support for AI-enabled startups focused on scale, positioning, and credibility. The emphasis is on avoiding fragile growth by embedding responsible AI, decision clarity, and execution discipline early.
 
 **Client deliverable**  
-A practical **startup advisor pack**, typically including **positioning and messaging guidance**, a **scale and capability plan**, and a lightweight **responsible AI operating principles document** covering quality, risk, and customer trust.
+- **Positioning and differentiation guidance**  
+- **Scale and operating model plan**  
+- **Responsible AI operating principles** (quality, control, trust)
+
+**Book principles addressed**  
+- *AI magnifies organisational strengths and weaknesses*  
+- *Competing when AI collapses differentiation*  
+- *Retaining agency*  
+
+This service helps founders avoid building businesses that scale technical capability faster than organisational control or trust.
 
 ---
 
@@ -37,55 +70,109 @@ A practical **startup advisor pack**, typically including **positioning and mess
 
 ### AI Strategy Design  
 **What it does**  
-A structured engagement to define where AI should be applied first, how value will be created, and what choices determine success. This includes prioritising use cases, making buy-vs-build decisions, identifying data and capability requirements, and assessing legal, ethical, and security risks. The strategy explicitly ties AI initiatives to measurable business outcomes.
+Defines where AI should be applied first, how it creates value, and what trade-offs matter. Strategy is explicitly tied to P&L, risk, and decision-making — not experimentation or hype.
 
 **Client deliverable**  
-An **AI strategy pack** including a **prioritised use-case portfolio**, **value hypotheses and KPIs**, **buy/build/partner recommendations**, **data and platform requirements**, and an **initial risk and controls view**.
+- **Prioritised AI use-case portfolio**  
+- **Value hypotheses and KPIs**  
+- **Buy / build / partner decisions**  
+- **Data, platform, and risk requirements**
+
+**Book principles addressed**  
+- *Declare AI a business redesign*  
+- *Measure what actually matters*  
+- *Manage the AI dependency*  
+
+This service ensures AI strategy is an investment discipline, not a catalogue of ideas.
 
 ---
 
 ### AI Transformation Roadmap  
 **What it does**  
-Turns strategy into an executable, board-visible plan. The roadmap sequences initiatives into realistic phases (commonly 90-day, 6-month, and 12-month horizons), defines dependencies and governance, and sets expectations around cost, resourcing, and organisational change.
+Turns strategy into an executable plan that leadership and boards can govern. Focuses on sequencing, ownership, capability build, and risk control over time.
 
 **Client deliverable**  
-A **phased transformation roadmap** with timelines, milestones, dependencies, **budget estimates**, **role and team changes**, and a **governance model** covering decision rights, controls, and reporting cadence.
+- **90-day / 6-month / 12-month roadmap**  
+- **Budget ranges and resourcing changes**  
+- **Governance and decision rights model**
+
+**Book principles addressed**  
+- *Redesign how decisions are made*  
+- *Lead innovation with expectation of uncertainty*  
+- *Govern AI like enterprise risk*  
+
+This service prevents “pilot purgatory” by making AI transformation visible, owned, and staged.
 
 ---
 
 ### Delivery Oversight  
 **What it does**  
-Provides executive-level oversight to ensure AI initiatives deliver real outcomes. This includes governance and control for AI pilots, workflow automation, analytics, and forecasting tools—ensuring cross-functional ownership, risk management, and alignment to value rather than activity.
+Provides executive-level control across pilots and production deployments to ensure AI actually lands in the business. Focus is on adoption, risk, and value — not technical progress alone.
 
 **Client deliverable**  
-A **delivery governance layer**, including **steering committee packs**, **status dashboards**, **risk and issue logs**, **decision registers**, and **benefits tracking** tied to agreed KPIs.
+- **Steering committee packs**  
+- **Delivery dashboards and risk logs**  
+- **Benefits tracking tied to outcomes**
+
+**Book principles addressed**  
+- *Embed AI into core workflows or stop funding it*  
+- *When AI fails, who is actually in control?*  
+- *Measure what actually matters*  
+
+This service ensures AI changes how work is done, not just what is demonstrated.
 
 ---
 
 ### Fundamentals  
 **What it does**  
-Addresses the foundational capabilities required for AI to scale in real operating environments. This includes data strategy and deployment, tooling and platform setup, workflow automation, and resolving ownership, quality, and access constraints that prevent pilots from becoming sustainable capability.
+Addresses the data, tooling, and operating constraints that prevent AI from scaling. This includes data ownership, quality, workflow automation, and operating cadence.
 
 **Client deliverable**  
-A **foundations improvement package**, such as a **data strategy and deployment plan**, **tooling and workflow enablement plan**, **target-state capability blueprint**, and a **prioritised backlog of foundational fixes**.
+- **Data strategy and ownership model**  
+- **Tooling and workflow enablement plan**  
+- **Target-state capability blueprint**  
+- **Backlog of foundational fixes**
+
+**Book principles addressed**  
+- *Fix the data and operating foundations you’ve been avoiding*  
+- *AI exposes organisational reality*  
+
+This service tackles the unglamorous work that ultimately determines whether AI succeeds or fails.
 
 ---
 
 ### Assessments  
 **What it does**  
-Structured diagnostic assessments across data, analytics, AI literacy and training needs, and AI architecture. These assessments establish readiness, identify gaps and constraints, and create a fact base for investment, platform selection, and scaling decisions.
+Structured diagnostics across data, analytics, AI literacy, and architecture to establish readiness, constraints, and risk exposure before scaling.
 
 **Client deliverable**  
-An **assessment report** with **maturity findings**, **gap analysis**, **risk identification**, and a **prioritised remediation roadmap** with recommended actions and ownership.
+- **Maturity and gap assessment**  
+- **Risk and constraint analysis**  
+- **Prioritised remediation roadmap**
+
+**Book principles addressed**  
+- *Declare AI a business redesign*  
+- *Measure what actually matters*  
+- *Govern AI as enterprise risk*  
+
+This service creates a fact base for leadership decisions rather than optimism-driven funding.
 
 ---
 
 ### Reporting & Analytics  
 **What it does**  
-Designs leadership-grade reporting that measures value, decision quality, speed, and risk control. This includes metrics definition, dashboards, executive alerting, and support for advanced analytics, forecasting, and scenario planning.
+Designs leadership-grade metrics that track value, decision quality, speed, and learning — replacing vanity metrics with outcome-based measurement.
 
 **Client deliverable**  
-A set of **metrics and reporting deliverables**, including **dashboard specifications or dashboards**, **executive alert definitions**, **KPI trees**, and (where required) **forecasting or scenario models** ready for operational ownership.
+- **KPI trees tied to value creation**  
+- **Dashboards and executive alerts**  
+- **Forecasting and scenario models**
+
+**Book principles addressed**  
+- *Measure what actually matters*  
+- *Decision quality and speed as value drivers*  
+
+This service ensures AI impact is visible, governed, and reinvested — not hidden or assumed.
 
 ---
 
@@ -93,28 +180,45 @@ A set of **metrics and reporting deliverables**, including **dashboard specifica
 
 ### Executive Keynotes  
 **What it does**  
-High-impact keynotes that reframe AI as business and decision redesign rather than a technology program. Topics focus on leadership action, operating model change, and enterprise risk, creating urgency and shared language at the top of the organisation.
+High-impact keynotes that reframe AI as leadership, operating model, and risk redesign — creating urgency and shared language at the top.
 
 **Client deliverable**  
-A **delivered keynote**, supported by a **leadership-grade slide deck**, a **reusable executive narrative**, and (where requested) a **summary of implications and recommended next steps**.
+- **Delivered keynote**  
+- **Leadership-grade slide deck**  
+- **Reusable executive narrative**
+
+**Book principles addressed**  
+- *Why this is different this time*  
+- *Declare AI a business redesign*  
+- *Retaining agency*
 
 ---
 
 ### Private Corporate Talks  
 **What it does**  
-Tailored talks for executive offsites, leadership summits, and strategy kickoffs. These sessions are customised to the organisation’s context, maturity, and industry, helping leadership align on direction, priorities, and trade-offs.
+Tailored talks for offsites and strategy events that align leaders around priorities, trade-offs, and consequences.
 
 **Client deliverable**  
-A **customised leadership presentation**, supported by **context-specific examples**, **discussion prompts**, and a **post-session executive summary** highlighting decisions, risks, and opportunities.
+- **Custom leadership presentation**  
+- **Discussion prompts**  
+- **Post-session executive summary**
+
+**Book principles addressed**  
+- *The boardroom discussion*  
+- *Redesign decision-making*  
 
 ---
 
 ### Conference Speaking & Market Positioning  
 **What it does**  
-Conference speaking and panel participation that positions the client or Oblongix as a credible voice on practical AI transformation. These engagements support brand visibility, investor confidence, and market trust.
+Thought leadership that positions organisations as credible, execution-focused AI leaders.
 
 **Client deliverable**  
-A **conference keynote or panel appearance**, supported by **polished presentation materials** and optional **thought-leadership content** for reuse in marketing or communications.
+- **Conference keynote or panel appearance**  
+- **Polished presentation materials**
+
+**Book principles addressed**  
+- *Competing when AI collapses differentiation*  
 
 ---
 
@@ -122,34 +226,55 @@ A **conference keynote or panel appearance**, supported by **polished presentati
 
 ### Executive Workshops (Half-Day / Full-Day)  
 **What it does**  
-Structured working sessions that move leaders from awareness to decision-making. Using a shared framework, participants work through value creation, decision rights, workflows, and governance implications for their organisation.
+Working sessions that move leaders from awareness to decisions on value, workflows, governance, and ownership.
 
 **Client deliverable**  
-A **facilitated workshop** plus a **workshop output pack**, typically including agreed priorities, decision principles, a draft AI agenda, governance implications, and **clear next actions with named ownership**.
+- **Facilitated workshop**  
+- **Decision summary and action plan**
+
+**Book principles addressed**  
+- *Redesign how decisions are made*  
+- *Embed AI into core workflows*  
 
 ---
 
 ### Small-Group Leadership Intensives  
 **What it does**  
-Deep-dive sessions for a small group of senior leaders addressing complex or sensitive AI topics such as accountability, major investments, or risk exposure. Sessions are highly interactive and adapted in real time.
+Deep-dive sessions for sensitive or complex AI decisions where authority, risk, or control is at stake.
 
 **Client deliverable**  
-A **confidential leadership working session** with a **tailored decision summary** capturing conclusions, unresolved issues, risks, and recommended follow-ups.
+- **Confidential leadership decision record**
+
+**Book principles addressed**  
+- *When AI fails, who is actually in control?*  
+- *Govern AI like enterprise risk*  
 
 ---
 
 ### AI Literacy for Non-Technical Leaders  
 **What it does**  
-Builds practical AI literacy for executives who are accountable for outcomes and risk but are not technical specialists. The focus is on how AI works conceptually, where it fails, and what leaders should demand from teams and vendors.
+Builds practical understanding so leaders can govern AI credibly without becoming technologists.
 
 **Client deliverable**  
-An **executive learning pack**, a **shared vocabulary and mental model**, and a **leader checklist** outlining the right questions to ask about AI initiatives, performance, and risk.
+- **Executive learning pack**  
+- **Leader checklists and mental models**
+
+**Book principles addressed**  
+- *Board and executive literacy as governance prerequisite*  
 
 ---
 
-### Themed Education Sessions (Operating Models, Risk & Governance, Ethics)  
+### Themed Education Sessions (Operating Model, Risk, Ethics)  
 **What it does**  
-Focused education sessions addressing specific leadership concerns such as AI-ready operating models, human vs. machine decision rights, and governing AI as material enterprise risk.
+Focused sessions turning abstract principles into executable governance and operating practices.
 
 **Client deliverable**  
-A **theme-specific education session** plus **practical reference materials**, including operating model sketches, governance templates, control concepts, and example reporting structures.
+- **Reference templates and governance artifacts**
+
+**Book principles addressed**  
+- *Govern AI like a material enterprise risk*  
+- *Retaining agency*
+
+---
+
+**All services are grounded in the leadership framework of *The CEO’s Guide to AI Transformation* and are designed to turn principles into operating reality.**
