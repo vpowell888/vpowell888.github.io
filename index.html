@@ -1,131 +1,490 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta name="description" content="Oblongix redefines business consulting using AI. Rapid, scalable solutions powered by human expertise and machine intelligence.">
-  <meta name="keywords" content="AI consulting, business transformation, Oblongix, digital strategy, scalable consulting, artificial intelligence, agile delivery">
-  <meta name="author" content="Oblongix">
-  <link rel="canonical" href="https://www.oblongix.com/" />
-  <meta property="og:title" content="Oblongix | AI-Powered Business Consulting" />
-  <meta property="og:description" content="Redefining business consulting using AI and human expertise." />
-  <meta property="og:url" content="https://www.oblongix.com/" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Oblongix Advisory helps CEOs, boards, and leadership teams turn AI into measurable business value through strategy, delivery, and governance." />
+  <title>Oblongix Advisory | Executive AI Transformation</title>
+
+  <meta property="og:title" content="Oblongix Advisory" />
+  <meta property="og:description" content="Executive-led AI transformation that delivers measurable value, clear governance, and board-ready operating models." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" name="image" content="https://www.oblongix.com/Oblongix-logo-og.png" />
+  <meta property="og:site_name" content="Oblongix Advisory" />
+  <meta property="og:url" content="https://www.oblongix.com" />
+  <meta name="theme-color" content="#10264c" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Oblongix | AI-Powered Business Consulting" />
-  <meta name="twitter:description" content="Redefining business consulting using AI and human expertise." />
-  <meta name="twitter:image" content="https://www.oblongix.com/Oblongix-logo-og.png" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oblongix | Business Consulting Redefined by AI</title>
-  <link rel="icon" href="/favicon.png" sizes="256x256" type="image/png">
-  <meta name="msapplication-TileImage" content="/favicon.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H908F2NV5Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <link rel="icon" type="image/png" href="Oblongix Logo.png" />
 
-  function gtag() {
-    dataLayer.push(arguments);
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Segoe UI', 'sans-serif'],
+            display: ['Fraunces', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --ink: #10264c;
+      --ink-2: #0d1d3b;
+      --text: #223c63;
+      --muted: #5a6d90;
+      --line: rgba(16, 38, 76, 0.14);
+      --accent: #8fb6ff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(143, 182, 255, 0.26), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(25, 55, 107, 0.14), transparent 32%),
+        linear-gradient(180deg, #edf3ff 0%, #f8fbff 45%, #eff4ff 100%);
+    }
+    .section-heading { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+    .panel {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 48px rgba(9, 21, 45, 0.12);
+      backdrop-filter: blur(7px);
+    }
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(143, 182, 255, 0.34);
+      background: linear-gradient(140deg, rgba(9, 21, 45, 0.98) 0%, rgba(16, 38, 76, 0.95) 52%, rgba(25, 55, 107, 0.92) 100%);
+      box-shadow: 0 30px 90px rgba(9, 21, 45, 0.35);
+    }
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(30deg, rgba(143, 182, 255, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(143, 182, 255, 0.1) 87.5%, rgba(143, 182, 255, 0.1)),
+        linear-gradient(150deg, rgba(143, 182, 255, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(143, 182, 255, 0.1) 87.5%, rgba(143, 182, 255, 0.1));
+      background-size: 86px 150px;
+      background-position: 0 0, 43px 75px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .hero-shell > * { position: relative; z-index: 1; }
+    .book-shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(143, 182, 255, 0.3);
+      background: linear-gradient(130deg, rgba(9, 21, 45, 0.99) 0%, rgba(16, 38, 76, 0.96) 50%, rgba(25, 55, 107, 0.94) 100%);
+      box-shadow: 0 34px 90px rgba(7, 14, 30, 0.45);
+    }
+    .book-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(30deg, rgba(143, 182, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(143, 182, 255, 0.08) 87.5%, rgba(143, 182, 255, 0.08)),
+        linear-gradient(150deg, rgba(143, 182, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(143, 182, 255, 0.08) 87.5%, rgba(143, 182, 255, 0.08));
+      background-size: 82px 146px;
+      background-position: 0 0, 41px 73px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .book-shell > * { position: relative; z-index: 1; }
+    .chip { border: 1px solid rgba(143, 182, 255, 0.42); background: rgba(143, 182, 255, 0.12); color: #deebff; }
+    .book-offer-card {
+      border: 1px solid rgba(143, 182, 255, 0.28);
+      background: linear-gradient(155deg, rgba(15, 35, 72, 0.96) 0%, rgba(10, 24, 50, 0.95) 100%);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Oblongix Advisory",
+    "url": "https://www.oblongix.com",
+    "founder": { "@type": "Person", "name": "Vincent A. Powell" }
   }
-  gtag('js', new Date());
-  gtag('config', 'G-H908F2NV5Z');
-</script>
-
+  </script>
+</head>
 <body>
-  <main class="main">
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="index.html" class="site-brand">
-          <img class="site-logo" src="Oblongix-logo.png" alt="Oblongix Logo">
-        </a>
-        <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="advisory.html">Advisory</a>
-          <a href="mailto:contact@oblongix.com">Contact</a>
-        </nav>
-
-        <div class="header-actions">
-          <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-ghost">
-            <span class="theme-icons">
-              <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-              <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zM17.24 19.16l1.79 1.8 1.79-1.79-1.8-1.8-1.78 1.79zM20 11v2h3v-2h-3zM12 4a8 8 0 100 16 8 8 0 000-16zM4.22 4.22L2.81 5.63l1.79 1.79 1.41-1.41L4.22 4.22zM19.78 4.22l-1.41 1.41 1.79 1.79 1.41-1.41-1.79-1.79z"></path></svg>
-            </span>
-          </button>
+  <header class="sticky top-0 z-50 border-b border-[rgba(16,38,76,0.12)] bg-[rgba(248,252,255,0.88)] backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="Oblongix Logo.png" alt="Oblongix logo" class="h-11 w-11 rounded-xl border border-[rgba(16,38,76,0.12)] bg-white p-1 shadow" />
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-tight text-[#10264c]">Oblongix</div>
+          <div class="text-xs text-[#5a6d90]">Advisory</div>
         </div>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm md:flex">
+        <a class="text-[#4f6386] hover:text-[#10264c]" href="#what">What we do</a>
+        <a class="text-[#4f6386] hover:text-[#10264c]" href="#services">Services</a>
+        <a class="text-[#4f6386] hover:text-[#10264c]" href="#book">The book</a>
+        <a class="text-[#4f6386] hover:text-[#10264c]" href="#about">About</a>
+        <a class="text-[#4f6386] hover:text-[#10264c]" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden rounded-xl border border-[rgba(16,38,76,0.2)] bg-white px-4 py-2 text-sm font-semibold text-[#10264c] hover:border-[rgba(16,38,76,0.35)] md:inline-block">Book a call</a>
+        <button id="menuBtn" class="inline-flex items-center justify-center rounded-xl border border-[rgba(16,38,76,0.2)] bg-white p-2 text-[#10264c] hover:border-[rgba(16,38,76,0.35)] md:hidden" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
       </div>
-    </header>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-[rgba(16,38,76,0.12)] bg-[rgba(248,252,255,0.98)] md:hidden">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#what" class="py-1 text-[#30486f]">What we do</a>
+        <a href="#services" class="py-1 text-[#30486f]">Services</a>
+        <a href="#book" class="py-1 text-[#30486f]">The book</a>
+        <a href="#about" class="py-1 text-[#30486f]">About</a>
+        <a href="#contact" class="py-1 text-[#30486f]">Contact</a>
+      </div>
+    </div>
+  </header>
 
-    <section class="portal-section">
-      <div class="container">
-        <div class="portal">
-          <div class="portal-card" id="oblongix">
-            <div>
-              <img src="Oblongix-logo.png" alt="Oblongix">
-              <h2>Data &amp; AI Solutions</h2>
-              <ul><li><a href="AIConsult.html">AI-Consult</a> - AI Agent/Workflow driven consulting platform</li>
-              <li><a href="https://www.sesl.ai">SESL</a> — Deterministic AI, solves LLM hallucination</li>
-              <li><a href="beaconguard.html">BeaconGuard</a> - Wifi Spectrum change and intruder detection</li>
-              <li><a href="Reggie.html">Reggie</a> - Regulatory document management and compliance</li>
-            </ul>
-            </p>
+  <main id="top">
+    <section class="mx-auto max-w-6xl px-4 pb-16 pt-12 md:pt-16">
+      <div class="hero-shell rounded-[2rem] p-7 md:p-10">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-[rgba(143,182,255,0.4)] bg-[rgba(255,255,255,0.08)] px-4 py-1 text-xs text-[#dbe8ff]">
+              <span class="h-2.5 w-2.5 rounded-full bg-[#8fb6ff]"></span> Executive-led AI transformation
+            </div>
+            <h1 class="section-heading mt-5 text-4xl font-bold tracking-tight text-white md:text-6xl">Turn AI into measurable business value.</h1>
+            <p class="mt-5 text-lg leading-relaxed text-[#d2e2ff]">Oblongix Advisory helps CEOs, boards, and leadership teams redesign decision-making, embed AI into core workflows, fix foundations, and govern AI like enterprise risk.</p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-[#8fb6ff] px-5 py-3 text-sm font-semibold text-[#0c1a37] hover:bg-[#a4c4ff]">Discuss your AI agenda</a>
+              <a href="#book" class="inline-flex items-center justify-center rounded-xl border border-[rgba(143,182,255,0.45)] bg-transparent px-5 py-3 text-sm font-semibold text-[#deebff] hover:bg-[rgba(143,182,255,0.14)]">See the reference framework</a>
             </div>
           </div>
-          <div class="portal-card" id="advisory">          <div>
-              <img src="oblongix-logo-inverted.png" alt="Data &amp; AI Advisory">
-              <h2>Data &amp; AI Advisory</h2>
-              <p>Strategic & Technology advisory for Data & AI Change
-                <ul>
-                <li>Business strategy design and review</li>
-                <li>Business readiness assessment</li>
-                <li>Technology Project Implementation services</li>
-                <li>Technology Project team resourcing</li>
-                </ul>
-                We enable AI adoption to deliver measurable business value.</p>
-            </div>
-            <div>
-              <a class="btn btn-success" href="advisory.html">Learn More</a>
+
+          <div class="panel rounded-3xl p-6 md:p-7">
+            <div class="text-sm font-semibold text-[#10264c]">Typical outcomes we deliver</div>
+            <div class="mt-1 text-sm text-[#516586]">Measured in value, decision quality, speed, and risk control.</div>
+            <div class="mt-6 space-y-4 text-sm text-[#263d65]">
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.14)] bg-white p-4"><div class="font-semibold text-[#10264c]">AI strategy tied to P&amp;L and risk</div><div class="mt-1">Prioritised agenda, funding logic, and governance-beyond pilots.</div></div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.14)] bg-white p-4"><div class="font-semibold text-[#10264c]">Decision architecture and controls</div><div class="mt-1">Where AI advises vs decides, escalation paths, and human override.</div></div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.14)] bg-white p-4"><div class="font-semibold text-[#10264c]">Workflow embedding that sticks</div><div class="mt-1">AI workflows with KPIs and operational ownership linked to revenue/cost.</div></div>
+              <div class="rounded-2xl border border-[rgba(16,38,76,0.14)] bg-white p-4"><div class="font-semibold text-[#10264c]">Fixing the Foundations for AI</div><div class="mt-1">Data strategy, tools, and governance supporting AI initiatives.</div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+    <section id="what" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="section-heading text-3xl font-semibold tracking-tight text-[#10264c]">What Oblongix Advisory does</h2>
+          <p class="mt-3 text-[#42597c]">We help organisations capture real value from AI by treating it as an operating model and decision redesign, then delivering the foundations, workflows, and governance required to scale.</p>
+          <div class="panel mt-6 rounded-3xl p-6">
+            <div class="text-sm font-semibold text-[#10264c]">Our delivery approach</div>
+            <p class="mt-2 text-sm text-[#576b8e]">A structured method that starts with value and leadership alignment, and ends with AI operating safely in production.</p>
+            <ol class="mt-5 grid gap-3 text-sm text-[#21385d] sm:grid-cols-1">
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Align - clarify value, sponsorship, and scope</li>
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Diagnose - assess challenge, constraints, risks, and readiness</li>
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Design - define change and roadmap</li>
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Build - deliver change and core capabilities</li>
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Embed - drive adoption in real business workflows</li>
+              <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-3">Govern and Operate - monitor performance, controls, and scale</li>
+            </ol>
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div class="panel rounded-3xl p-6">
+            <div class="text-sm font-semibold text-[#10264c]">When we are most useful</div>
+            <ul class="mt-3 space-y-2 text-sm text-[#42597c]">
+              <li>- You have pilots but few measurable outcomes</li>
+              <li>- Value is unclear or governance is weak</li>
+              <li>- Data ownership and operating constraints block scale</li>
+              <li>- Leaders need a board-ready plan for controls and risk</li></ul>
+          </div>
+          <div class="panel rounded-3xl p-6">
+            <div class="text-sm font-semibold text-[#10264c]">How we work</div>
+            <ul class="mt-3 space-y-2 text-sm text-[#42597c]">
+              <li>- Short, focused engagements with clear outputs: diagnostics, decision maps, operating model changes, and delivery support.</li>
+              <li>- Longer term partnerships for ongoing transformation and governance.</li>
+            </ul>
+          </div>
+          <div class="panel rounded-3xl p-6">
+            <div class="text-sm font-semibold text-[#10264c]">Who we work with</div>
+            <p class="mt-3 text-sm text-[#42597c]">Our clients include large corporations, private equity firms, and small to mid-sized businesses across multiple sectors. We also advise government departments.</p>
+            <p class="mt-2 text-sm text-[#42597c]">Typical client contacts include CEOs, CIOs, COOs, and boards who need to understand how to capture value from AI while controlling risk.</p>
+            <p class="mt-2 text-sm text-[#42597c]">As an independent advisory firm, we also partner with consultancies, software businesses, and systems integrators.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="section-heading text-3xl font-semibold tracking-tight text-[#10264c]">Services</h2>
+          <p class="mt-2 text-[#42597c]">A structured service model built around execution, advisory depth, and leadership visibility.</p>
+        </div>
+        <a href="#contact" class="w-fit rounded-xl border border-[rgba(16,38,76,0.2)] bg-white px-4 py-2 text-sm font-semibold text-[#10264c] hover:border-[rgba(16,38,76,0.35)]">Request a proposal</a>
+      </div>
+      <div class="grid gap-4">
+        <div class="panel rounded-3xl p-6">
+          <div class="text-lg font-semibold text-[#10264c]">1. Advisory Services</div>
+          <p class="mt-2 text-sm text-[#42597c]">Ongoing guidance for CEOs, CIOs, COOs, and boards that need decision confidence without full execution support.</p>
+          <div class="mt-4 grid gap-4 md:grid-cols-3 text-sm text-[#42597c]">
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Executive AI advisor</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Monthly or quarterly leadership sessions</li>
+                <li>- Vendor and investment decision reviews</li>
+                <li>- Strategic sounding board</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Board-level AI advisory</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Translate technical issues into business impact</li>
+                <li>- Clarify risk and opportunity posture</li>
+                <li>- Support investor and regulator readiness</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Startup advisory</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Retainer or equity-based support</li>
+                <li>- Positioning and scale strategy</li>
+                <li>- Responsible AI operating principles</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl border border-[rgba(16,38,76,0.1)] bg-[#f4f8ff] p-4 text-sm text-[#3b5478]">
+            Board level thought leadership giving leaders language they can reuse internally.
+          </div>
+        </div>
+
+        <div class="panel rounded-3xl p-6">
+          <div class="text-lg font-semibold text-[#10264c]">2. Consulting Services</div>
+          <p class="mt-2 text-sm text-[#42597c]">Hands-on engagements where we help leadership teams implement what the framework sets out.</p>
+          <div class="mt-4 grid gap-4 md:grid-cols-3 text-sm text-[#42597c]">
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">AI strategy design</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Where AI should be used first</li>
+                <li>- Buy vs build decisions</li>
+                <li>- Data requirements</li>
+                <li>- Legal, ethical, and security risks</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">AI transformation roadmap</div>
+              <ul class="mt-2 space-y-1">
+                <li>- 90-day, 6-month, and 12-month plans</li>
+                <li>- Budget estimates</li>
+                <li>- Role, team, and governance changes</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Delivery oversight</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Executive AI pilots</li>
+                <li>- Workflow automation</li>
+                <li>- Analytics and forecasting tools</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Fundamentals</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Data Strategyand deployment</li>
+                <li>- Executive AI pilots</li>
+                <li>- Workflow automation</li>
+                <li>- Tool deployment</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Assessments</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Data</li>
+                <li>- Analytics</li>
+                <li>- AI Literacy / Training needs</li>
+                <li>- AI Architecture</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4">
+              <div class="font-semibold text-[#10264c]">Reporting & Analytics</div>
+              <ul class="mt-2 space-y-1">
+                <li>- Metrics and dashboards</li>
+                <li>- Executive alerting</li>
+                <li>- Advanced Analytics</li>
+                <li>- Forecasting and scenario planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl border border-[rgba(16,38,76,0.1)] bg-[#f4f8ff] p-4 text-sm text-[#3b5478]">
+            All projects can be tailored to a client's individual needs.
+          </div>
+        </div>
+
+  
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="panel rounded-3xl p-6">
+            <div class="text-lg font-semibold text-[#10264c]">3. Speaking and Keynotes </div>
+            <p class="mt-2 text-sm text-[#42597c]">Paid speaking for conferences, offsites, and leadership forums.</p>
+            <ul class="mt-3 space-y-1 text-sm text-[#42597c]">
+              <li>- Executive keynote topics: "AI transformation without chaos" and "What CEOs must do in the next 24 months"</li>
+              <li>- Private corporate talks for leadership summits and strategy kickoffs</li>
+              <li>- Conference appearances for high-visibility market positioning</li>
+            </ul>
+            <p class="mt-3 text-sm text-[#3b5478]">The book acts as proof of a coherent point of view to support individual client initiatives.</p>
+          </div>
+
+          <div class="panel rounded-3xl p-6">
+            <div class="text-lg font-semibold text-[#10264c]">4. Workshops and Executive Education</div>
+            <p class="mt-2 text-sm text-[#42597c]">Interactive sessions that bridge speaking and consulting.</p>
+            <ul class="mt-3 space-y-1 text-sm text-[#42597c]">
+              <li>- Half-day and full-day executive workshops</li>
+              <li>- Small-group leadership intensives</li>
+              <li>- AI literacy training for non-technical leaders</li>
+              <li>- Core themes: AI for CEOs, AI-ready operating models, risk/governance/ethics</li>
+            </ul>
+            <p class="mt-3 text-sm text-[#3b5478]">The book provides pre-reads, shared language, and a clear methodology.</p>
+            
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section id="book" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="book-shell rounded-[2rem] p-8 md:p-10">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <div class="inline-flex items-center rounded-full border border-[rgba(143,182,255,0.4)] bg-[rgba(143,182,255,0.12)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#deebff]">Reference framework</div>
+            <h2 class="section-heading mt-4 text-4xl font-bold tracking-tight text-white md:text-5xl">The CEO's Guide to AI Transformation</h2>
+            <p class="mt-4 text-base leading-relaxed text-[#d4e3ff]">The advisory work is grounded in the book's leadership framework: treat AI as business redesign, redesign decision-making, embed AI into core workflows, fix foundations, and govern AI like material enterprise risk.</p>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href="https://ceoaitransformbook.web.app/" class="inline-flex items-center justify-center rounded-xl bg-[#8fb6ff] px-5 py-3 text-sm font-semibold text-[#0c1a37] hover:bg-[#a4c4ff]" target="_blank" rel="noopener noreferrer">View the book site</a>
+              <a href="#contact" class="inline-flex items-center justify-center rounded-xl border border-[rgba(143,182,255,0.45)] bg-transparent px-5 py-3 text-sm font-semibold text-[#deebff] hover:bg-[rgba(143,182,255,0.14)]">Bring this framework into your organisation</a>
+            </div>
+            <div class="mt-7 flex items-center gap-3 text-sm text-[#c9dbff]"><img src="Oblongix Logo.png" alt="Oblongix mark" class="h-8 w-8 rounded-lg border border-[rgba(143,182,255,0.3)] bg-white/90 p-1" /><span>Published by Oblongix Advisory Publishing</span></div>
+          </div>
+          <div class="book-offer-card rounded-3xl p-6 text-white">
+            <div class="text-xs uppercase tracking-[0.18em] text-[#9ab8ee]">What leaders get</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="chip rounded-2xl p-3">A board-ready transformation agenda tied to value and risk</li>
+              <li class="chip rounded-2xl p-3">Decision rights: where AI advises/decides plus human override</li>
+              <li class="chip rounded-2xl p-3">Workflow embedding plan with measurable KPIs</li>
+              <li class="chip rounded-2xl p-3">Governance model: controls, monitoring, and accountability</li>
+              <li class="chip rounded-2xl p-3">Foundational fixes: data ownership and operating constraints</li>
+            </ul>
+            <div class="mt-6 rounded-2xl border border-[rgba(143,182,255,0.24)] bg-[rgba(143,182,255,0.08)] p-4 text-xs text-[#c5d9ff]">Author: Vincent A. Powell</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="grid gap-8 md:grid-cols-2">
+        <div>
+          <h2 class="section-heading text-3xl font-semibold tracking-tight text-[#10264c]">About</h2>
+          <p class="mt-3 text-[#42597c]">Oblongix Advisory helps leadership teams convert AI ambition into measurable value with stronger decision architecture, safer governance, and execution that works in real operating environments.</p>
+          <p class="mt-3 text-[#42597c]">Led by Vincent A. Powell (CStat, BSc Hons), a transformation leader with 25+ years of experience across private equity, portfolio boards, and executive teams delivering value through data, AI, analytics, and digital transformation.</p>
+          <p class="mt-3 text-[#42597c]">Profile highlights include former PwC Partner for Data and AI in Private Equity and Value Creation, advisory on billion-dollar transactions, scaling high-value consulting businesses, and senior leadership roles at PwC, HPE/DXC, CSC, and IBM Global Services.</p>
+          <p class="mt-3 text-[#42597c]">Vincent combines CxO-level business leadership with deep technical delivery, including modern AI platform design and agent-enabled operating models used in enterprise environments.</p>
+        </div>
+        <div class="panel rounded-3xl p-6">
+          <div class="text-sm font-semibold text-[#10264c]">Oblongix Business Principles</div>
+          <ul class="mt-4 space-y-3 text-sm text-[#42597c]">
+            <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4"><span class="font-semibold text-[#10264c]">Client Business Centred Transformation</span><br />Every AI decision is anchored to commercial priorities, operating realities, and leadership accountability.</li>
+            <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4"><span class="font-semibold text-[#10264c]">Deep Technology Understanding</span><br />We combine strategic guidance with practical expertise in data, platforms, automation, and modern AI architecture.</li>
+            <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4"><span class="font-semibold text-[#10264c]">Outcome Led</span><br />Work is measured by impact on value, decision quality, speed, and risk control, not activity or tooling.</li>
+            <li class="rounded-2xl border border-[rgba(16,38,76,0.1)] bg-white p-4"><span class="font-semibold text-[#10264c]">Principled but Pragmatic</span><br />Strong standards on governance and ethics, delivered in ways that are practical and executable for the business.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="panel rounded-3xl p-8">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <div>
+            <h2 class="section-heading text-3xl font-semibold tracking-tight text-[#10264c]">Contact</h2>
+            <p class="mt-3 text-[#42597c]">Share a short brief and we will respond with a focused next step (diagnostic, decision map, or delivery plan).</p>
+            <div class="mt-6 space-y-2 text-sm text-[#42597c]">
+              <div><span class="font-semibold text-[#10264c]">Email:</span> <a class="hover:underline" href="mailto:contact@oblongix.com">contact@oblongix.com</a></div>
+              <div><span class="font-semibold text-[#10264c]">Location:</span> London, UK</div>
+              <div><span class="font-semibold text-[#10264c]">Book site:</span> <a class="hover:underline" href="https://ceoaitransformbook.web.app/" target="_blank" rel="noopener noreferrer">The CEO's Guide to AI Transformation</a></div>
+            </div>
+          </div>
+
+          <form class="space-y-4" onsubmit="return sendMail(event)">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-sm font-semibold text-[#10264c]" for="name">Name</label>
+                <input id="name" name="name" required class="mt-1 w-full rounded-xl border border-[rgba(16,38,76,0.24)] bg-white px-4 py-3 text-sm text-[#10264c] outline-none focus:border-[#5a93f8]" placeholder="Your name" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-[#10264c]" for="email">Email</label>
+                <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl border border-[rgba(16,38,76,0.24)] bg-white px-4 py-3 text-sm text-[#10264c] outline-none focus:border-[#5a93f8]" placeholder="you@company.com" />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-semibold text-[#10264c]" for="topic">What do you need help with?</label>
+              <select id="topic" name="topic" class="mt-1 w-full rounded-xl border border-[rgba(16,38,76,0.24)] bg-white px-4 py-3 text-sm text-[#10264c] outline-none focus:border-[#5a93f8]">
+                <option>Consulting: AI strategy or transformation roadmap</option>
+                <option>Advisory: executive or board-level support</option>
+                <option>Speaking: keynote or leadership event</option>
+                <option>Workshop: executive education session</option>
+                <option>Pilot delivery: copilot, automation, analytics</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-semibold text-[#10264c]" for="message">Brief</label>
+              <textarea id="message" name="message" rows="5" required class="mt-1 w-full rounded-xl border border-[rgba(16,38,76,0.24)] bg-white px-4 py-3 text-sm text-[#10264c] outline-none focus:border-[#5a93f8]" placeholder="A few sentences on your context, what value means for you, and your timeline."></textarea>
+            </div>
+            <button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-[#10264c] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0d1d3b]">Send enquiry</button>
+            <p class="text-xs text-[#5f7194]">This form opens your email client (no data stored on the website).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-[rgba(16,38,76,0.12)] bg-[rgba(248,252,255,0.9)]">
+      <div class="mx-auto max-w-6xl px-4 py-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-center gap-2 text-sm text-[#5b6f92]"><img src="Oblongix Logo.png" alt="Oblongix logo" class="h-6 w-6 rounded-md border border-[rgba(16,38,76,0.14)] bg-white p-0.5" /><span>&copy; <span id="year"></span> Oblongix Advisory. All rights reserved.</span></div>
+          <div class="flex gap-4 text-sm text-[#5b6f92]"><a class="hover:text-[#10264c] hover:underline" href="https://ceoaitransformbook.web.app/" target="_blank" rel="noopener noreferrer">Book</a><a class="hover:text-[#10264c] hover:underline" href="#contact">Contact</a><a class="hover:text-[#10264c] hover:underline" href="#services">Services</a></div>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="muted">© 2026 Oblongix</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="advisory.html">Advisory</a>
-        <a href="mailto:contact@oblongix.com">Contact</a>
-      </nav>
-    </div>
-  </footer>
-  <script src="assets/js/theme-toggle.js"></script>
   <script>
-    function scrollToNext() {
-      const next = document.querySelector('section:nth-of-type(2)');
-      if (next) next.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Oblongix",
-      "url": "https://www.oblongix.com",
-      "logo": "https://www.oblongix.com/logo.png",
-      "sameAs": [
-        "https://www.linkedin.com/company/oblongix",
-        "https://twitter.com/oblongix"
-      ]
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendMail(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const topic = document.getElementById('topic').value;
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent(`[Oblongix Advisory] ${topic}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\nBrief:\n${message}\n`);
+      window.location.href = `mailto:contact@oblongix.com?subject=${subject}&body=${body}`;
+      return false;
     }
   </script>
 </body>
-
 </html>
