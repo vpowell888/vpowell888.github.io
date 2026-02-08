@@ -211,6 +211,28 @@
       line-height: 1.52;
       color: #2a4269;
     }
+    .service-modal-highlight {
+      margin-top: 1rem;
+      border: 1px solid rgba(16, 38, 76, 0.2);
+      background: linear-gradient(145deg, rgba(16, 38, 76, 0.09), rgba(143, 182, 255, 0.2));
+      border-radius: 0.9rem;
+      padding: 0.85rem 0.95rem;
+      color: #112a52;
+    }
+    .service-modal-highlight-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #486189;
+    }
+    .service-modal-highlight-text {
+      margin-top: 0.35rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-weight: 600;
+      color: #153360;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -630,8 +652,11 @@
           <div class="service-modal-block">
             <div class="service-modal-label">Book Principles Addressed</div>
             <ul id="serviceModalPrinciples" class="service-modal-list"></ul>
-            <p id="serviceModalBookLink" class="service-modal-copy"></p>
           </div>
+        </div>
+        <div id="serviceModalBookLinkBox" class="service-modal-highlight">
+          <div class="service-modal-highlight-label">Framework Linkage</div>
+          <p id="serviceModalBookLink" class="service-modal-highlight-text"></p>
         </div>
       </div>
     </div>
@@ -882,6 +907,7 @@
     const serviceModalDeliverables = document.getElementById('serviceModalDeliverables');
     const serviceModalPrinciples = document.getElementById('serviceModalPrinciples');
     const serviceModalBookLink = document.getElementById('serviceModalBookLink');
+    const serviceModalBookLinkBox = document.getElementById('serviceModalBookLinkBox');
     const serviceModalClose = document.getElementById('serviceModalClose');
     let serviceModalLastFocus = null;
 
@@ -902,6 +928,7 @@
       setModalList(serviceModalDeliverables, service.deliverables || []);
       setModalList(serviceModalPrinciples, service.principles || []);
       serviceModalBookLink.textContent = service.bookLink || '';
+      serviceModalBookLinkBox.style.display = service.bookLink ? 'block' : 'none';
       serviceModalLastFocus = triggerEl || null;
       serviceModalBackdrop.classList.add('open');
       serviceModalBackdrop.setAttribute('aria-hidden', 'false');
