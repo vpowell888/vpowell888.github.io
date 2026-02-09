@@ -1,0 +1,29 @@
+{
+    "indexes": [
+        {
+            "collectionGroup": "projects",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "teamMembers", "arrayConfig": "CONTAINS" },
+                { "fieldPath": "updatedAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "invites",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "projectId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "invites",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "email", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}

@@ -1,0 +1,42 @@
+name: Firebase Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup GCP service account (optional)
+        if: ${{ secrets.GCP_SA_KEY != '' }}
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ceoaitransform
+
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          npx firebase-tools --version
+          # If a GCP service account was provided via setup-gcloud, firebase-tools will use
+          # application default credentials. Otherwise fall back to FIREBASE_TOKEN.
+          if [ -n "${{ secrets.GCP_SA_KEY }}" ]; then
+            npx firebase-tools deploy --only hosting --project ceoaitransform
+          else
+            npx firebase-tools deploy --only hosting --project ceoaitransform --token "$FIREBASE_TOKEN"
+          fi

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Transformation Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    <script>
+        (function () {
+            var fromHost = 'ceoaitransform.firebaseapp.com';
+            var toHost = 'ceoaitransform.web.app';
+            if (window.location.hostname === fromHost) {
+                var target =
+                    window.location.protocol +
+                    '//' +
+                    toHost +
+                    window.location.pathname +
+                    window.location.search +
+                    window.location.hash;
+                window.location.replace(target);
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="loginScreen" class="auth-screen">
+        <div class="auth-card">
+            <h1>AI Transformation Platform</h1>
+            <p class="muted">Sign in to manage projects, services, and deliverables.</p>
+            <div class="auth-highlights">
+                <span>Manage consulting projects and client engagements</span>
+                <span>Track deliverables, stakeholders, and project plans</span>
+                <span>Built for consultants, advisors, and leadership teams</span>
+            </div>
+
+            <div class="tab-header">
+                <button class="tab-btn active" data-tab="login">Sign In</button>
+                <button class="tab-btn" data-tab="register">Create Account</button>
+            </div>
+
+            <form id="loginForm" class="auth-form" autocomplete="on">
+                <label>Email</label>
+                <input id="loginEmail" type="email" autocomplete="username" required />
+
+                <label>Password</label>
+                <input id="loginPassword" type="password" autocomplete="current-password" required />
+
+                <button id="loginBtn" class="btn-primary" type="submit">Sign In</button>
+                <a href="#" id="forgotPasswordLink" class="inline-link">Forgot password?</a>
+            </form>
+
+            <form id="registerForm" class="auth-form" autocomplete="on" style="display: none;">
+                <label>Full Name</label>
+                <input id="registerName" type="text" required />
+
+                <label>Email</label>
+                <input id="registerEmail" type="email" autocomplete="email" required />
+
+                <label>Company</label>
+                <input id="registerCompany" type="text" autocomplete="organization" required />
+
+                <label>Role</label>
+                <select id="registerRole">
+                    <option value="lead">Lead Consultant</option>
+                    <option value="consultant">Consultant</option>
+                    <option value="analyst">Analyst</option>
+                </select>
+
+                <label>Password</label>
+                <input id="registerPassword" type="password" autocomplete="new-password" required />
+
+                <button id="registerBtn" class="btn-primary" type="submit">Create Account</button>
+            </form>
+
+            <div id="authError" class="error-message" style="display: none;"></div>
+            <div id="debugPanel" class="debug-panel" style="display: none;">
+                <strong>Local debug users:</strong>
+                <pre id="debugUsers"></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" style="display: none;">
+        <header class="top-nav">
+            <div class="nav-title">AI Transformation Platform</div>
+            <div class="nav-right">
+                <div class="user-menu">
+                    <button id="userMenuBtn" class="user-btn" type="button">
+                        <span id="userAvatar" class="avatar">U</span>
+                        <span id="userName">User</span>
+                    </button>
+                    <div id="userDropdown" class="dropdown-menu" style="display: none;">
+                        <a href="#" id="logoutBtn" class="dropdown-item">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-label">Navigation</div>
+            <a href="#" class="sidebar-link active" data-view="dashboard">Dashboard</a>
+            <a href="#" class="sidebar-link" data-view="projects">Projects</a>
+        </aside>
+
+        <main class="main-content">
+            <section id="dashboardView" class="view-content">
+                <div class="page-header">
+                    <div>
+                        <h2>Dashboard</h2>
+                        <p class="muted">Overview of current projects.</p>
+                    </div>
+                    <button id="newProjectBtn" class="btn-primary" data-action="open-new-project">New Project</button>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-label">Active Projects</div>
+                        <div id="activeProjects" class="stat-value">0</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-label">Hours Logged</div>
+                        <div id="totalHours" class="stat-value">0</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-label">Team Members</div>
+                        <div id="teamSize" class="stat-value">1</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-label">Average Completion</div>
+                        <div id="avgCompletion" class="stat-value">0%</div>
+                    </article>
+                </div>
+
+                <article class="journey-panel">
+                    <h3>Getting Started</h3>
+                    <ol>
+                        <li>Create a project and select a service.</li>
+                        <li>Track deliverables and update the project plan.</li>
+                        <li>Add stakeholders and manage your team.</li>
+                    </ol>
+                    <button class="btn-primary" data-action="open-new-project" type="button">
+                        Start New Project
+                    </button>
+                </article>
+
+                <div class="section-header">
+                    <h3>Recent Projects</h3>
+                </div>
+                <div id="recentProjects" class="projects-grid"></div>
+            </section>
+
+            <section id="projectsView" class="view-content" style="display: none;">
+                <div class="page-header">
+                    <div>
+                        <h2>Projects</h2>
+                        <p class="muted">Manage and filter all projects.</p>
+                        <p id="projectsCount" class="small"></p>
+                    </div>
+                    <button id="newProjectBtn2" class="btn-primary" data-action="open-new-project">New Project</button>
+                </div>
+
+                <div class="filters-bar">
+                    <label>
+                        Status
+                        <select id="statusFilter">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="paused">Paused</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </label>
+                    <label class="search-label">
+                        Search
+                        <input id="searchProjects" type="text" placeholder="Search projects..." />
+                    </label>
+                </div>
+
+                <div id="projectsList" class="projects-list"></div>
+            </section>
+
+            <section id="projectDetailView" class="view-content" style="display: none;"></section>
+        </main>
+    </div>
+
+    <div id="newProjectModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Project</h3>
+                <button id="closeModal" class="modal-close" type="button">x</button>
+            </div>
+            <div class="modal-body">
+                <label>Client Name *</label>
+                <input id="clientName" type="text" required />
+
+                <label>Industry</label>
+                <select id="clientIndustry">
+                    <option value="">Select industry</option>
+                    <option value="financial">Financial Services</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="technology">Technology</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="retail">Retail and Consumer</option>
+                    <option value="energy">Energy and Utilities</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <div class="grid-two">
+                    <label>
+                        Company Size
+                        <select id="companySize">
+                            <option value="">Select size</option>
+                            <option value="small">Small (&lt;500)</option>
+                            <option value="medium">Medium (500-5,000)</option>
+                            <option value="large">Large (5,000-50,000)</option>
+                            <option value="enterprise">Enterprise (&gt;50,000)</option>
+                        </select>
+                    </label>
+                    <label>
+                        Annual Revenue
+                        <select id="annualRevenue">
+                            <option value="">Select range</option>
+                            <option value="small">&lt; $100M</option>
+                            <option value="medium">$100M - $1B</option>
+                            <option value="large">$1B - $10B</option>
+                            <option value="enterprise">&gt; $10B</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>Primary Service *</label>
+                <select id="primaryService">
+                    <option value="">Select a primary service</option>
+                </select>
+
+                <label>Project Description</label>
+                <textarea id="projectDescription" rows="3"></textarea>
+
+                <div>
+                    <div class="section-header compact">
+                        <h4>Team Members</h4>
+                    </div>
+                    <div class="team-add-inline">
+                        <input id="teamMemberEmailInput" type="email" placeholder="team.member@company.com" />
+                        <select id="teamMemberRoleInput">
+                            <option value="collaborator">Collaborator</option>
+                            <option value="consultant">Consultant</option>
+                            <option value="lead">Lead</option>
+                        </select>
+                        <button id="addTeamMemberBtn" class="btn-secondary" type="button">Add Team Member</button>
+                    </div>
+                    <p class="small">Team members are invited when the project is created.</p>
+                    <div id="teamMembersList" class="team-members">
+                        <div class="team-member-item current-user">
+                            <span class="avatar">ME</span>
+                            <div>
+                                <div id="currentUserName">Current User</div>
+                                <small>Lead Consultant</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelModal" class="btn-secondary" type="button">Cancel</button>
+                <button id="createProjectBtn" class="btn-primary" type="button">Create Project</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="teamModal" class="modal" style="display: none;" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Manage Team</h3>
+                <button id="teamModalClose" class="modal-close" type="button">x</button>
+            </div>
+            <div id="teamModalContent" class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="teamModalCancel" class="btn-secondary" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal" style="display: none;" aria-hidden="true">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3 id="confirmTitle">Confirm</h3>
+                <button id="confirmClose" class="modal-close" type="button">x</button>
+            </div>
+            <div class="modal-body">
+                <p id="confirmMessage">Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmCancel" class="btn-secondary" type="button">Cancel</button>
+                <button id="confirmOk" class="btn-danger" type="button">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <script src="config.js"></script>
+    <script src="safe-html.js"></script>
+    <script src="diagnostic-data.js"></script>
+    <script src="app.js"></script>
+    <script src="diagnostic-workflow.js"></script>
+</body>
+</html>

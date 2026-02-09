@@ -1,0 +1,42 @@
+name: Smoke tests
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  smoke:
+    name: Run Puppeteer smoke tests (local mock)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Build bundle
+        run: npm run build
+
+      - name: Start static server
+        run: |
+          npx http-server public -p 8082 &
+          sleep 2
+
+      - name: Run smoke tests
+        env:
+          CI: true
+          BASE_URL: http://127.0.0.1:8082
+        run: |
+          node tests/smoke.js

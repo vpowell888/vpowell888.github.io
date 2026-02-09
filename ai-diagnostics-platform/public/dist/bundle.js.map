@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../main-module.js"],
+  "sourcesContent": ["// Minimal entry retained for optional bundling workflows.\nexport function initializeRefactoredModules() {\n    if (typeof window !== 'undefined') {\n        window._modules = window._modules || {};\n    }\n}\n\nif (typeof window !== 'undefined') {\n    window.initializeRefactoredModules = initializeRefactoredModules;\n}\n"],
+  "mappings": "MACO,SAASA,GAA8B,CACtC,OAAO,OAAW,MAClB,OAAO,SAAW,OAAO,UAAY,CAAC,EAE9C,CAEI,OAAO,OAAW,MAClB,OAAO,4BAA8BA",
+  "names": ["initializeRefactoredModules"]
+}
